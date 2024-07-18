@@ -1,0 +1,3 @@
+istep,ground_energy,nDefect,defect_center_xs,defect_center_ys,defect_center_zs,nBasin,nSP_thisbasin,nSP_superbasin,iSP_selected,forward_barrier,ebias,backward_barrier,time_step,simulation_time
+0,-8020.230403,2,0.929189,0.929189,0.929189,1,8,7,2,0.634,0.549,0.085,837.17168,837.17168
+1,-8019.681604,2,0.920136,0.920136,0.920136,1,2,1,0,0.089,-0.547,0.636,1.923046,839.094727

@@ -1,0 +1,44 @@
+potential:
+    species:
+        - Fe
+        - P
+    masses:
+        - 1, 55.847
+    bondlengths:
+        - 1, 1, 2.5
+    coordnums:
+        - 1, 8
+    pair_style: eam/fs
+    FileName: Fe-P.eam.fs
+    Path2Pot: /Users/taoliang/myResearch/SEAKMC_py/examples/Use_calllammps
+    pair_coeff: False
+force_evaluator:
+    Bin: calllammps
+    Path2Bin: /Users/taoliang/anaconda3/envs/my-lammps-env/bin
+    Style: lammps
+    WorkWorkDir: True
+    Input2color: False
+data:
+    atom_style: atomic
+    FileName: data.vac
+    Relaxed: False
+kinetic_MC:
+    NSteps: 2
+    Temp: 800.0
+    AccStyle: NoAcc
+saddle_point:
+    ValidSPs:
+        CheckConnectivity: True
+active_volume:
+    Style: defects
+    DCut4PDR: 4.0
+    FindDefects:
+        Method: BLCN
+    DActive: 7.7
+    DBuffer: 3.0
+    DFixed: 10
+spsearch:
+    NSearch: 10
+    SearchBuffer: True
+    LocalRelax:
+        LocalRelax: True

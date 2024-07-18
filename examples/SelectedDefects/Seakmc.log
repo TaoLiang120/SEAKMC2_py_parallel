@@ -1,0 +1,269 @@
+The unit is LAMMPS metal unit.
+The default bond length is the bond length in pymatgen with bond order one.
+The default cutting distance for neighbors is 1.1 times of the bond lengths!
+The default coordination number is 4.
+Seakmc start ...
+Successfully loading input and structure ...
+istep KMC: 0
+There are 26 defects before the point defect reduction.
+The ground energy is 0.0 eV at 0 KMC step!
+There are 1 defects (active volumes) in data at 0 KMC step!
+The fractional coords of the defect center are [0.525 0.503 0.503] at 0 KMC step!
+
+ActVol ID: 0 nactive:1092 nbuffer:866 nfixed:5625
+AV center fractional coords: (0.525, 0.503, 0.503)
+idav:0, idsps: 0,  ntrans: 310,  barrier:0.31,  ebias: 0.0
+      dmag:1.73, dmagFin:1.99, isConnect: False
+      Valid SPs: 1, num of SPs:1, time: 75.28 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 195,  barrier:0.68,  ebias: 0.0
+      dmag:1.56, dmagFin:1.77, isConnect: False
+      Valid SPs: 2, num of SPs:2, time: 37.76 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 170,  barrier:0.68,  ebias: 0.0
+      dmag:1.56, dmagFin:1.76, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 35.81 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 180,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.76, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 44.81 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 154,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 38.32 s
+-----------------------------------------------------------------
+idav:0, idsps: 5,  ntrans: 200,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 5, num of SPs:5, time: 53.69 s
+-----------------------------------------------------------------
+idav:0, idsps: 6,  ntrans: 140,  barrier:0.31,  ebias: 0.0
+      dmag:0.99, dmagFin:1.77, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 44.81 s
+-----------------------------------------------------------------
+idav:0, idsps: 7,  ntrans: 188,  barrier:0.42,  ebias: 0.41
+      dmag:1.13, dmagFin:1.24, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 73.33 s
+-----------------------------------------------------------------
+idav:0, idsps: 8,  ntrans: 172,  barrier:0.31,  ebias: 0.0
+      dmag:1.73, dmagFin:1.99, isConnect: False
+      Valid SPs: 8, num of SPs:8, time: 43.39 s
+-----------------------------------------------------------------
+idav:0, idsps: 9,  ntrans: 150,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 8, num of SPs:8, time: 33.19 s
+-----------------------------------------------------------------
+Found 4 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 482.5 s
+-----------------------------------------------------------------
+In KMC step ...
+Current basin info at 0 KMC step - ID:0 Number of saddle points:4 ID of selection:[0]
+                  Selected event - Barrier:0.307 Backward barrier:0.304
+Superbasin info at 0 KMC step - Number of basins:1 Number of saddle points: 3 ID of selection:[0]
+Local info of seleted events at 0 KMC step - Basin ID:[0] KMC step:0 Event ID:[0]
+All seleted events of the superbasin at 0 KMC step - Basin ID:[0] Event ID: [0]
+-----------------------------------------------------------------
+Relaxing the structure ...
+KMC 0th step is finished.
+Time step for 0 KMC step: 14.22 ps
+Summed time steps after 0 KMC step: 14.22 ps
+Real time cost for 0 KMC step: 493.6 s
+===================================================================
+istep KMC: 1
+There are 26 defects before the point defect reduction.
+The ground energy is -64202.467 eV at 1 KMC step!
+There are 1 defects (active volumes) in data at 1 KMC step!
+The fractional coords of the defect center are [0.489 0.478 0.525] at 1 KMC step!
+
+ActVol ID: 0 nactive:1138 nbuffer:852 nfixed:5713
+AV center fractional coords: (0.489, 0.478, 0.525)
+idav:0, idsps: 0,  ntrans: 147,  barrier:0.31,  ebias: 0.0
+      dmag:1.73, dmagFin:1.99, isConnect: False
+      Valid SPs: 1, num of SPs:1, time: 38.16 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 156,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 38.84 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 186,  barrier:0.42,  ebias: 0.41
+      dmag:1.13, dmagFin:1.24, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 47.65 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 133,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 34.06 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 182,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 47.47 s
+-----------------------------------------------------------------
+idav:0, idsps: 5,  ntrans: 201,  barrier:0.68,  ebias: 0.0
+      dmag:1.56, dmagFin:1.77, isConnect: False
+      Valid SPs: 6, num of SPs:6, time: 47.16 s
+-----------------------------------------------------------------
+idav:0, idsps: 6,  ntrans: 227,  barrier:0.68,  ebias: 0.0
+      dmag:1.56, dmagFin:1.77, isConnect: False
+      Valid SPs: 7, num of SPs:7, time: 51.9 s
+-----------------------------------------------------------------
+idav:0, idsps: 7,  ntrans: 132,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 33.56 s
+-----------------------------------------------------------------
+idav:0, idsps: 8,  ntrans: 100,  barrier:110.0,  ebias: 110.0
+      dmag:1.54, dmagFin:1.54, isConnect: False
+      Valid SPs: 8, num of SPs:8, time: 24.65 s
+-----------------------------------------------------------------
+idav:0, idsps: 9,  ntrans: 150,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 8, num of SPs:8, time: 33.38 s
+-----------------------------------------------------------------
+Found 5 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 398.9 s
+-----------------------------------------------------------------
+In KMC step ...
+Current basin info at 1 KMC step - ID:1 Number of saddle points:5 ID of selection:[4]
+                  Selected event - Barrier:0.306 Backward barrier:0.304
+Superbasin info at 1 KMC step - Number of basins:2 Number of saddle points: 7 ID of selection:[7]
+Local info of seleted events at 1 KMC step - Basin ID:[1] KMC step:1 Event ID:[4]
+All seleted events of the superbasin at 1 KMC step - Basin ID:[0, 1] Event ID: [0, 4]
+-----------------------------------------------------------------
+Relaxing the structure ...
+KMC 1th step is finished.
+Time step for 1 KMC step: 93.85 ps
+Summed time steps after 1 KMC step: 108.07 ps
+Real time cost for 1 KMC step: 409.8 s
+===================================================================
+istep KMC: 2
+There are 26 defects before the point defect reduction.
+The ground energy is -64202.467 eV at 2 KMC step!
+There are 1 defects (active volumes) in data at 2 KMC step!
+The fractional coords of the defect center are [0.473 0.505 0.495] at 2 KMC step!
+
+ActVol ID: 0 nactive:1166 nbuffer:925 nfixed:5769
+AV center fractional coords: (0.473, 0.505, 0.495)
+idav:0, idsps: 0,  ntrans: 153,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 39.2 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 224,  barrier:0.31,  ebias: 0.0
+      dmag:0.99, dmagFin:1.77, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 59.51 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 200,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 2, num of SPs:2, time: 51.85 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 159,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 42.05 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 157,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 41.24 s
+-----------------------------------------------------------------
+idav:0, idsps: 5,  ntrans: 100,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 4, num of SPs:4, time: 24.68 s
+-----------------------------------------------------------------
+idav:0, idsps: 6,  ntrans: 155,  barrier:0.31,  ebias: 0.0
+      dmag:0.99, dmagFin:1.77, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 41.23 s
+-----------------------------------------------------------------
+idav:0, idsps: 7,  ntrans: 221,  barrier:0.42,  ebias: 0.41
+      dmag:1.13, dmagFin:1.24, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 52.08 s
+-----------------------------------------------------------------
+idav:0, idsps: 8,  ntrans: 150,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 6, num of SPs:6, time: 33.52 s
+-----------------------------------------------------------------
+idav:0, idsps: 9,  ntrans: 199,  barrier:0.31,  ebias: 0.0
+      dmag:0.99, dmagFin:1.77, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 50.65 s
+-----------------------------------------------------------------
+Found 7 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 438.1 s
+-----------------------------------------------------------------
+In KMC step ...
+Current basin info at 2 KMC step - ID:2 Number of saddle points:7 ID of selection:[4]
+                  Selected event - Barrier:0.306 Backward barrier:0.305
+Superbasin info at 2 KMC step - Number of basins:3 Number of saddle points: 12 ID of selection:[11]
+Local info of seleted events at 2 KMC step - Basin ID:[2] KMC step:2 Event ID:[4]
+All seleted events of the superbasin at 2 KMC step - Basin ID:[0, 1, 2] Event ID: [0, 4, 4]
+-----------------------------------------------------------------
+Relaxing the structure ...
+KMC 2th step is finished.
+Time step for 2 KMC step: 2.8 ps
+Summed time steps after 2 KMC step: 110.87 ps
+Real time cost for 2 KMC step: 448.7 s
+===================================================================
+istep KMC: 3
+There are 26 defects before the point defect reduction.
+The ground energy is -64202.467 eV at 3 KMC step!
+There are 1 defects (active volumes) in data at 3 KMC step!
+The fractional coords of the defect center are [0.484 0.532 0.531] at 3 KMC step!
+
+ActVol ID: 0 nactive:1261 nbuffer:975 nfixed:6010
+AV center fractional coords: (0.484, 0.532, 0.531)
+idav:0, idsps: 0,  ntrans: 233,  barrier:0.68,  ebias: 0.0
+      dmag:1.56, dmagFin:1.77, isConnect: False
+      Valid SPs: 1, num of SPs:1, time: 56.4 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 100,  barrier:110.0,  ebias: 110.0
+      dmag:1.56, dmagFin:1.56, isConnect: False
+      Valid SPs: 1, num of SPs:1, time: 26.97 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 166,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 45.0 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 175,  barrier:0.31,  ebias: 0.0
+      dmag:1.74, dmagFin:1.99, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 47.21 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 150,  barrier:110.0,  ebias: 110.0
+      dmag:0.98, dmagFin:0.98, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 39.16 s
+-----------------------------------------------------------------
+idav:0, idsps: 5,  ntrans: 154,  barrier:0.31,  ebias: 0.0
+      dmag:0.99, dmagFin:1.77, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 41.38 s
+-----------------------------------------------------------------
+idav:0, idsps: 6,  ntrans: 288,  barrier:0.31,  ebias: 0.0
+      dmag:0.99, dmagFin:1.77, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 80.27 s
+-----------------------------------------------------------------
+idav:0, idsps: 7,  ntrans: 251,  barrier:0.42,  ebias: 0.0
+      dmag:1.32, dmagFin:1.99, isConnect: False
+      Valid SPs: 6, num of SPs:6, time: 64.1 s
+-----------------------------------------------------------------
+idav:0, idsps: 8,  ntrans: 128,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 35.26 s
+-----------------------------------------------------------------
+idav:0, idsps: 9,  ntrans: 214,  barrier:0.31,  ebias: 0.0
+      dmag:0.98, dmagFin:1.77, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 57.3 s
+-----------------------------------------------------------------
+Found 5 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 495.3 s
+-----------------------------------------------------------------
+In KMC step ...
+Current basin info at 3 KMC step - ID:3 Number of saddle points:5 ID of selection:[3]
+                  Selected event - Barrier:0.306 Backward barrier:0.304
+Superbasin info at 3 KMC step - Number of basins:4 Number of saddle points: 16 ID of selection:[15]
+Local info of seleted events at 3 KMC step - Basin ID:[3] KMC step:3 Event ID:[3]
+All seleted events of the superbasin at 3 KMC step - Basin ID:[0, 1, 2, 3] Event ID: [0, 4, 4, 3]
+-----------------------------------------------------------------
+Relaxing the structure ...
+KMC 3th step is finished.
+Time step for 3 KMC step: 4.56 ps
+Summed time steps after 3 KMC step: 115.42 ps
+Real time cost for 3 KMC step: 505.7 s
+===================================================================
+Total KMC time steps for this simulation: 115.42 ps
+Real time cost for this simulation:1858.0 s
+===================================================================

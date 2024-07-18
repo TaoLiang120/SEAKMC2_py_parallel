@@ -1,0 +1,59 @@
+potential:
+    species:
+        - Fe
+    masses:
+        - 1, 55.847
+    bondlengths:
+        - 1, 1, 3.15
+    coordnums:
+        - 1, 14
+    pair_style: eam/fs
+    FileName: Fe-P.eam.fs
+    Path2Pot: False
+    pair_coeff: False
+force_evaluator:
+    Bin: pylammps
+data:
+    atom_style: atomic
+    FileName: vac10.dat
+    Relaxed: True
+kinetic_MC:
+    NSteps: 1
+    Temp: 800.0
+    AccStyle: NoAcc
+saddle_point:
+    ValidSPs:
+        CheckConnectivity: True
+        CheckConnectivity4insituGSPS: True
+active_volume:
+    Style: defects
+    DCut4PDR: 5.0
+    FindDefects:
+        Method: CN
+    DActive: 8.0
+    DBuffer: 2.0
+    DFixed: 10
+    Overlapping: False
+spsearch:
+    NSearch: 10
+    insituGuidedSPS: True
+    NMax4Trans: 1000
+    HandleVN:
+        RescaleVN: True
+        RescaleValue: LOGN
+        CenterVN: False
+        Ratio4Zero4LOGV: 0.2
+        RescaleVN4insituGSPS: True
+        RescaleValue4insituGSPS: LOGN
+        CenterVN4insituGSPS: False
+        Ratio4Zero4LOGV4insituGSPS: 0.2
+    TrialStepsize: 0.005
+    MaxStepsize: 0.025
+    SearchBuffer: False
+    DecayStyle: fixed
+    insituGuidedSPS: True
+    Ratio4DispLoad4insituGSPS: 0.9
+    TrialStepsize4insituGSPS: 0.015
+    MaxStepsize4insituGSPS: 0.05
+    NMax4Trans4insituGSPS: 1500
+    NMaxSPs4insituGSPS: 200

@@ -1,0 +1,52 @@
+The unit is LAMMPS metal unit.
+The default bond length is the bond length in pymatgen with bond order one.
+The default cutting distance for neighbors is 1.1 times of the bond lengths!
+The default coordination number is 4.
+Seakmc start ...
+Successfully loading input and structure ...
+Relaxing the initial structure ...
+istep KMC: 0
+There are 8 defects before the point defect reduction.
+The ground energy is -8020.23 eV at 0 KMC step!
+There are 1 defects (active volumes) in data at 0 KMC step!
+The fractional coords of the defect center are [0.95 0.95 0.95] at 0 KMC step!
+
+ActVol ID: 0 nactive:168 nbuffer:290 nfixed:1478
+AV center fractional coords: (0.95, 0.95, 0.95)
+idav:0, idsps: 0,  ntrans: 164,  barrier:0.64,  ebias: 0.55
+      dmag:0.86, dmagFin:1.22, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 11.47 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 288,  barrier:0.64,  ebias: 0.55
+      dmag:0.86, dmagFin:1.22, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 17.34 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 147,  barrier:0.64,  ebias: 0.55
+      dmag:0.86, dmagFin:1.22, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 10.3 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 273,  barrier:0.64,  ebias: 0.55
+      dmag:0.86, dmagFin:1.22, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 16.41 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 229,  barrier:0.64,  ebias: 0.55
+      dmag:0.86, dmagFin:1.22, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 15.83 s
+-----------------------------------------------------------------
+Found 8 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 72.1 s
+-----------------------------------------------------------------
+In KMC step ...
+Current basin info at 0 KMC step - ID:0 Number of saddle points:8 ID of selection:[6]
+                  Selected event - Barrier:0.644 Backward barrier:0.094
+-----------------------------------------------------------------
+Relaxing the structure ...
+KMC 0th step is finished.
+Time step for 0 KMC step: 787.71 ps
+Summed time steps after 0 KMC step: 787.71 ps
+Real time cost for 0 KMC step: 75.1 s
+===================================================================
+Total KMC time steps for this simulation: 787.71 ps
+Real time cost for this simulation:76.1 s
+===================================================================

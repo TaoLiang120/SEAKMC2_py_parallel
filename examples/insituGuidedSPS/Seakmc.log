@@ -1,0 +1,935 @@
+The data file uses the same format of LAMMPS.The unit is LAMMPS metal unit.
+The default bond length is the bond length in pymatgen with bond order one.
+The default cutting distance for neighbors is 1.1 times of the bond lengths!
+The default coordination number is 4.
+Seakmc start ...
+Successfully loading input and structure ...
+istep KMC: 0
+There are 137 defects before the point defect reduction.
+There are 14 defects after the point defect reduction.
+The ground energy is -7968.629 eV at 0 KMC step!
+There are 1 defects (active volumes) in data at 0 KMC step!
+The fractional coords of the defect center are [0.003 0.991 0.928] at 0 KMC step!
+
+There are total 14 precursor volumes.
+-----------------------------------------------------------------
+The precursor IDs: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13] AV ID:0.
+-----------------------------------------------------------------
+Precursor ID: 0 nactive:168 nbuffer:169 nfixed:1558
+Precursor center fractional coords: (0.94997, 0.94996, 0.95006)
+idav:0, idsps: 0,  ntrans: 282,  barrier:0.646,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 34.21 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 397,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 41.102 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 363,  barrier:0.649,  ebias: 0.552
+      dmag:0.864, dmagFin:1.216, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 35.886 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 343,  barrier:0.649,  ebias: 0.552
+      dmag:0.864, dmagFin:1.216, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 37.644 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 358,  barrier:0.647,  ebias: 0.554
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 36.863 s
+-----------------------------------------------------------------
+idav:0, idsps: 5,  ntrans: 380,  barrier:0.646,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 39.538 s
+-----------------------------------------------------------------
+idav:0, idsps: 6,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.856, dmagFin:0.856, isConnect: False
+      Valid SPs: 4, num of SPs:4, time: 29.543 s
+-----------------------------------------------------------------
+idav:0, idsps: 7,  ntrans: 349,  barrier:0.648,  ebias: 0.553
+      dmag:0.866, dmagFin:1.217, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 36.904 s
+-----------------------------------------------------------------
+idav:0, idsps: 8,  ntrans: 400,  barrier:20.0,  ebias: 20.0
+      dmag:0.849, dmagFin:0.849, isConnect: False
+      Valid SPs: 5, num of SPs:5, time: 38.193 s
+-----------------------------------------------------------------
+idav:0, idsps: 9,  ntrans: 338,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 34.656 s
+-----------------------------------------------------------------
+Found 5 saddle points in 0 precursor volume!
+-----------------------------------------------------------------
+Total time for 0 precursor volume: 364.549 s
+-----------------------------------------------------------------
+Precursor ID: 1 nactive:168 nbuffer:169 nfixed:1558
+Precursor center fractional coords: (0.94997, 0.25003, 0.54994)
+idav:1, idsps: 0,  ntrans: 344,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 35.198 s
+-----------------------------------------------------------------
+idav:1, idsps: 1,  ntrans: 343,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 35.205 s
+-----------------------------------------------------------------
+idav:1, idsps: 2,  ntrans: 422,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 42.544 s
+-----------------------------------------------------------------
+idav:1, idsps: 3,  ntrans: 459,  barrier:0.64,  ebias: 0.545
+      dmag:0.86, dmagFin:1.214, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 55.776 s
+-----------------------------------------------------------------
+idav:1, idsps: 4,  ntrans: 300,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 30.384 s
+-----------------------------------------------------------------
+idav:1, idsps: 5,  ntrans: 349,  barrier:0.648,  ebias: 0.555
+      dmag:0.865, dmagFin:1.213, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 36.387 s
+-----------------------------------------------------------------
+idav:1, idsps: 6,  ntrans: 311,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 31.455 s
+-----------------------------------------------------------------
+idav:1, idsps: 7,  ntrans: 339,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.214, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 33.374 s
+-----------------------------------------------------------------
+idav:1, idsps: 8,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.858, dmagFin:0.858, isConnect: False
+      Valid SPs: 7, num of SPs:7, time: 36.354 s
+-----------------------------------------------------------------
+idav:1, idsps: 9,  ntrans: 337,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 35.237 s
+-----------------------------------------------------------------
+Found 7 saddle points in 1 precursor volume!
+-----------------------------------------------------------------
+Total time for 1 precursor volume: 371.925 s
+-----------------------------------------------------------------
+Precursor ID: 2 nactive:179 nbuffer:182 nfixed:1552
+Precursor center fractional coords: (0.92797, 0.73353, 0.21106)
+idav:2, idsps: 0,  ntrans: 277,  barrier:0.649,  ebias: 0.571
+      dmag:0.883, dmagFin:1.205, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 27.497 s
+-----------------------------------------------------------------
+idav:2, idsps: 1,  ntrans: 150,  barrier:0.434,  ebias: 0.343
+      dmag:0.782, dmagFin:1.168, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 16.307 s
+-----------------------------------------------------------------
+idav:2, idsps: 2,  ntrans: 200,  barrier:20.0,  ebias: 20.0
+      dmag:0.778, dmagFin:0.778, isConnect: False
+      Valid SPs: 2, num of SPs:2, time: 21.504 s
+-----------------------------------------------------------------
+idav:2, idsps: 3,  ntrans: 302,  barrier:0.433,  ebias: 0.342
+      dmag:0.779, dmagFin:1.167, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 31.488 s
+-----------------------------------------------------------------
+idav:2, idsps: 4,  ntrans: 286,  barrier:0.434,  ebias: 0.343
+      dmag:0.782, dmagFin:1.168, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 29.588 s
+-----------------------------------------------------------------
+idav:2, idsps: 5,  ntrans: 270,  barrier:0.65,  ebias: 0.573
+      dmag:0.881, dmagFin:1.201, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 28.944 s
+-----------------------------------------------------------------
+idav:2, idsps: 6,  ntrans: 392,  barrier:0.65,  ebias: 0.573
+      dmag:0.881, dmagFin:1.201, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 40.772 s
+-----------------------------------------------------------------
+idav:2, idsps: 7,  ntrans: 200,  barrier:20.0,  ebias: 20.0
+      dmag:0.774, dmagFin:0.774, isConnect: False
+      Valid SPs: 4, num of SPs:4, time: 19.388 s
+-----------------------------------------------------------------
+idav:2, idsps: 8,  ntrans: 185,  barrier:0.433,  ebias: 0.342
+      dmag:0.779, dmagFin:1.167, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 19.56 s
+-----------------------------------------------------------------
+idav:2, idsps: 9,  ntrans: 200,  barrier:20.0,  ebias: 20.0
+      dmag:0.766, dmagFin:0.766, isConnect: False
+      Valid SPs: 4, num of SPs:4, time: 21.345 s
+-----------------------------------------------------------------
+Found 4 saddle points in 2 precursor volume!
+-----------------------------------------------------------------
+Total time for 2 precursor volume: 256.402 s
+-----------------------------------------------------------------
+Precursor ID: 3 nactive:177 nbuffer:173 nfixed:1558
+Precursor center fractional coords: (0.94974, 0.84984, 0.23129)
+idav:3, idsps: 0,  ntrans: 294,  barrier:0.434,  ebias: 0.343
+      dmag:0.778, dmagFin:1.165, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 31.36 s
+-----------------------------------------------------------------
+idav:3, idsps: 1,  ntrans: 231,  barrier:0.434,  ebias: 0.343
+      dmag:0.778, dmagFin:1.165, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 24.619 s
+-----------------------------------------------------------------
+idav:3, idsps: 2,  ntrans: 235,  barrier:0.434,  ebias: 0.343
+      dmag:0.778, dmagFin:1.165, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 24.333 s
+-----------------------------------------------------------------
+idav:3, idsps: 3,  ntrans: 356,  barrier:0.652,  ebias: 0.576
+      dmag:0.883, dmagFin:1.203, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 36.413 s
+-----------------------------------------------------------------
+idav:3, idsps: 4,  ntrans: 210,  barrier:0.436,  ebias: 0.345
+      dmag:0.79, dmagFin:1.171, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 22.687 s
+-----------------------------------------------------------------
+idav:3, idsps: 5,  ntrans: 237,  barrier:0.434,  ebias: 0.343
+      dmag:0.778, dmagFin:1.165, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 24.943 s
+-----------------------------------------------------------------
+idav:3, idsps: 6,  ntrans: 250,  barrier:20.0,  ebias: 20.0
+      dmag:0.765, dmagFin:0.765, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 25.2 s
+-----------------------------------------------------------------
+idav:3, idsps: 7,  ntrans: 250,  barrier:20.0,  ebias: 20.0
+      dmag:0.784, dmagFin:0.784, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 26.106 s
+-----------------------------------------------------------------
+idav:3, idsps: 8,  ntrans: 190,  barrier:0.436,  ebias: 0.345
+      dmag:0.79, dmagFin:1.171, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 21.696 s
+-----------------------------------------------------------------
+idav:3, idsps: 9,  ntrans: 150,  barrier:20.0,  ebias: 20.0
+      dmag:0.784, dmagFin:0.784, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 16.486 s
+-----------------------------------------------------------------
+Found 1 saddle points in 3 precursor volume!
+-----------------------------------------------------------------
+Total time for 3 precursor volume: 253.859 s
+-----------------------------------------------------------------
+Precursor ID: 4 nactive:171 nbuffer:166 nfixed:1557
+Precursor center fractional coords: (0.19215, 0.60004, 0.39994)
+idav:4, idsps: 0,  ntrans: 332,  barrier:0.64,  ebias: 0.551
+      dmag:0.873, dmagFin:1.225, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 43.588 s
+-----------------------------------------------------------------
+idav:4, idsps: 1,  ntrans: 313,  barrier:0.637,  ebias: 0.549
+      dmag:0.872, dmagFin:1.224, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 33.515 s
+-----------------------------------------------------------------
+idav:4, idsps: 2,  ntrans: 349,  barrier:0.65,  ebias: 0.56
+      dmag:0.87, dmagFin:1.214, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 49.816 s
+-----------------------------------------------------------------
+idav:4, idsps: 3,  ntrans: 286,  barrier:0.653,  ebias: 0.566
+      dmag:0.88, dmagFin:1.222, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 32.74 s
+-----------------------------------------------------------------
+idav:4, idsps: 4,  ntrans: 294,  barrier:0.637,  ebias: 0.549
+      dmag:0.872, dmagFin:1.223, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 33.154 s
+-----------------------------------------------------------------
+idav:4, idsps: 5,  ntrans: 297,  barrier:0.646,  ebias: 0.553
+      dmag:0.866, dmagFin:1.212, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 29.839 s
+-----------------------------------------------------------------
+idav:4, idsps: 6,  ntrans: 337,  barrier:0.637,  ebias: 0.549
+      dmag:0.872, dmagFin:1.224, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 33.994 s
+-----------------------------------------------------------------
+idav:4, idsps: 7,  ntrans: 278,  barrier:0.64,  ebias: 0.551
+      dmag:0.873, dmagFin:1.225, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 31.544 s
+-----------------------------------------------------------------
+idav:4, idsps: 8,  ntrans: 344,  barrier:0.64,  ebias: 0.551
+      dmag:0.873, dmagFin:1.225, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 40.188 s
+-----------------------------------------------------------------
+idav:4, idsps: 9,  ntrans: 384,  barrier:0.646,  ebias: 0.553
+      dmag:0.866, dmagFin:1.212, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 43.335 s
+-----------------------------------------------------------------
+Found 6 saddle points in 4 precursor volume!
+-----------------------------------------------------------------
+Total time for 4 precursor volume: 371.726 s
+-----------------------------------------------------------------
+Precursor ID: 5 nactive:167 nbuffer:170 nfixed:1558
+Precursor center fractional coords: (0.29999, 0.60003, 0.39993)
+idav:5, idsps: 0,  ntrans: 286,  barrier:0.641,  ebias: 0.552
+      dmag:0.875, dmagFin:1.227, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 30.363 s
+-----------------------------------------------------------------
+idav:5, idsps: 1,  ntrans: 230,  barrier:0.64,  ebias: 0.551
+      dmag:0.874, dmagFin:1.227, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 24.544 s
+-----------------------------------------------------------------
+idav:5, idsps: 2,  ntrans: 377,  barrier:0.639,  ebias: 0.551
+      dmag:0.874, dmagFin:1.226, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 45.067 s
+-----------------------------------------------------------------
+idav:5, idsps: 3,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.868, dmagFin:0.868, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 46.112 s
+-----------------------------------------------------------------
+idav:5, idsps: 4,  ntrans: 328,  barrier:0.637,  ebias: 0.548
+      dmag:0.873, dmagFin:1.226, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 39.996 s
+-----------------------------------------------------------------
+idav:5, idsps: 5,  ntrans: 256,  barrier:0.638,  ebias: 0.549
+      dmag:0.874, dmagFin:1.226, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 26.683 s
+-----------------------------------------------------------------
+idav:5, idsps: 6,  ntrans: 300,  barrier:0.636,  ebias: 0.546
+      dmag:0.872, dmagFin:1.226, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 30.598 s
+-----------------------------------------------------------------
+idav:5, idsps: 7,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.868, dmagFin:0.868, isConnect: False
+      Valid SPs: 6, num of SPs:6, time: 51.223 s
+-----------------------------------------------------------------
+idav:5, idsps: 8,  ntrans: 275,  barrier:0.638,  ebias: 0.549
+      dmag:0.873, dmagFin:1.226, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 28.421 s
+-----------------------------------------------------------------
+idav:5, idsps: 9,  ntrans: 236,  barrier:0.641,  ebias: 0.552
+      dmag:0.875, dmagFin:1.227, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 28.916 s
+-----------------------------------------------------------------
+Found 4 saddle points in 5 precursor volume!
+-----------------------------------------------------------------
+Total time for 5 precursor volume: 351.941 s
+-----------------------------------------------------------------
+Precursor ID: 6 nactive:168 nbuffer:170 nfixed:1557
+Precursor center fractional coords: (0.45002, 0.74999, 0.85002)
+idav:6, idsps: 0,  ntrans: 331,  barrier:0.646,  ebias: 0.552
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 34.019 s
+-----------------------------------------------------------------
+idav:6, idsps: 1,  ntrans: 353,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 40.98 s
+-----------------------------------------------------------------
+idav:6, idsps: 2,  ntrans: 334,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 36.945 s
+-----------------------------------------------------------------
+idav:6, idsps: 3,  ntrans: 339,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 39.077 s
+-----------------------------------------------------------------
+idav:6, idsps: 4,  ntrans: 400,  barrier:20.0,  ebias: 20.0
+      dmag:0.851, dmagFin:0.851, isConnect: False
+      Valid SPs: 4, num of SPs:4, time: 44.496 s
+-----------------------------------------------------------------
+idav:6, idsps: 5,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.858, dmagFin:0.858, isConnect: False
+      Valid SPs: 4, num of SPs:4, time: 34.075 s
+-----------------------------------------------------------------
+idav:6, idsps: 6,  ntrans: 325,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 46.195 s
+-----------------------------------------------------------------
+idav:6, idsps: 7,  ntrans: 291,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 33.836 s
+-----------------------------------------------------------------
+idav:6, idsps: 8,  ntrans: 326,  barrier:0.647,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 32.865 s
+-----------------------------------------------------------------
+idav:6, idsps: 9,  ntrans: 400,  barrier:20.0,  ebias: 20.0
+      dmag:0.858, dmagFin:0.858, isConnect: False
+      Valid SPs: 6, num of SPs:6, time: 43.015 s
+-----------------------------------------------------------------
+Found 6 saddle points in 6 precursor volume!
+-----------------------------------------------------------------
+Total time for 6 precursor volume: 385.516 s
+-----------------------------------------------------------------
+Precursor ID: 7 nactive:180 nbuffer:180 nfixed:1553
+Precursor center fractional coords: (0.4302, 0.61011, 0.38327)
+idav:7, idsps: 0,  ntrans: 313,  barrier:0.652,  ebias: 0.563
+      dmag:0.877, dmagFin:1.216, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 33.964 s
+-----------------------------------------------------------------
+idav:7, idsps: 1,  ntrans: 316,  barrier:0.646,  ebias: 0.553
+      dmag:0.867, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 32.675 s
+-----------------------------------------------------------------
+idav:7, idsps: 2,  ntrans: 347,  barrier:0.659,  ebias: 0.57
+      dmag:0.878, dmagFin:1.22, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 37.828 s
+-----------------------------------------------------------------
+idav:7, idsps: 3,  ntrans: 269,  barrier:0.695,  ebias: 0.61
+      dmag:0.934, dmagFin:1.251, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 27.739 s
+-----------------------------------------------------------------
+idav:7, idsps: 4,  ntrans: 430,  barrier:0.637,  ebias: 0.549
+      dmag:0.873, dmagFin:1.225, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 48.348 s
+-----------------------------------------------------------------
+idav:7, idsps: 5,  ntrans: 291,  barrier:0.652,  ebias: 0.563
+      dmag:0.877, dmagFin:1.216, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 30.859 s
+-----------------------------------------------------------------
+idav:7, idsps: 6,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.871, dmagFin:0.871, isConnect: False
+      Valid SPs: 5, num of SPs:5, time: 31.945 s
+-----------------------------------------------------------------
+idav:7, idsps: 7,  ntrans: 250,  barrier:20.0,  ebias: 20.0
+      dmag:0.928, dmagFin:0.928, isConnect: False
+      Valid SPs: 5, num of SPs:5, time: 25.789 s
+-----------------------------------------------------------------
+idav:7, idsps: 8,  ntrans: 330,  barrier:0.637,  ebias: 0.549
+      dmag:0.873, dmagFin:1.225, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 33.727 s
+-----------------------------------------------------------------
+idav:7, idsps: 9,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.864, dmagFin:0.864, isConnect: False
+      Valid SPs: 5, num of SPs:5, time: 33.818 s
+-----------------------------------------------------------------
+Found 4 saddle points in 7 precursor volume!
+-----------------------------------------------------------------
+Total time for 7 precursor volume: 336.706 s
+-----------------------------------------------------------------
+Precursor ID: 8 nactive:181 nbuffer:176 nfixed:1554
+Precursor center fractional coords: (0.5698, 0.68987, 0.21672)
+idav:8, idsps: 0,  ntrans: 239,  barrier:0.695,  ebias: 0.611
+      dmag:0.936, dmagFin:1.249, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 17.029 s
+-----------------------------------------------------------------
+idav:8, idsps: 1,  ntrans: 286,  barrier:0.695,  ebias: 0.611
+      dmag:0.936, dmagFin:1.249, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 20.316 s
+-----------------------------------------------------------------
+idav:8, idsps: 2,  ntrans: 371,  barrier:0.645,  ebias: 0.551
+      dmag:0.862, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 24.862 s
+-----------------------------------------------------------------
+idav:8, idsps: 3,  ntrans: 245,  barrier:0.695,  ebias: 0.611
+      dmag:0.936, dmagFin:1.249, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 18.793 s
+-----------------------------------------------------------------
+idav:8, idsps: 4,  ntrans: 353,  barrier:0.651,  ebias: 0.556
+      dmag:0.861, dmagFin:1.212, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 26.74 s
+-----------------------------------------------------------------
+idav:8, idsps: 5,  ntrans: 273,  barrier:0.695,  ebias: 0.611
+      dmag:0.936, dmagFin:1.249, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 19.507 s
+-----------------------------------------------------------------
+idav:8, idsps: 6,  ntrans: 226,  barrier:0.695,  ebias: 0.611
+      dmag:0.936, dmagFin:1.249, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 15.79 s
+-----------------------------------------------------------------
+idav:8, idsps: 7,  ntrans: 357,  barrier:0.643,  ebias: 0.549
+      dmag:0.863, dmagFin:1.214, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 26.135 s
+-----------------------------------------------------------------
+idav:8, idsps: 8,  ntrans: 345,  barrier:0.644,  ebias: 0.552
+      dmag:0.865, dmagFin:1.214, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 25.196 s
+-----------------------------------------------------------------
+idav:8, idsps: 9,  ntrans: 295,  barrier:0.651,  ebias: 0.561
+      dmag:0.875, dmagFin:1.216, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 20.66 s
+-----------------------------------------------------------------
+Found 6 saddle points in 8 precursor volume!
+-----------------------------------------------------------------
+Total time for 8 precursor volume: 215.037 s
+-----------------------------------------------------------------
+Precursor ID: 9 nactive:172 nbuffer:165 nfixed:1557
+Precursor center fractional coords: (0.69222, 0.30003, 0.40001)
+idav:9, idsps: 0,  ntrans: 303,  barrier:0.741,  ebias: 0.699
+      dmag:0.952, dmagFin:1.193, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 22.851 s
+-----------------------------------------------------------------
+idav:9, idsps: 1,  ntrans: 360,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 26.515 s
+-----------------------------------------------------------------
+idav:9, idsps: 2,  ntrans: 337,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 23.611 s
+-----------------------------------------------------------------
+idav:9, idsps: 3,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.94, dmagFin:0.94, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 25.917 s
+-----------------------------------------------------------------
+idav:9, idsps: 4,  ntrans: 250,  barrier:20.0,  ebias: 20.0
+      dmag:0.938, dmagFin:0.938, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 16.655 s
+-----------------------------------------------------------------
+idav:9, idsps: 5,  ntrans: 314,  barrier:0.647,  ebias: 0.554
+      dmag:0.866, dmagFin:1.215, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 21.673 s
+-----------------------------------------------------------------
+idav:9, idsps: 6,  ntrans: 347,  barrier:0.741,  ebias: 0.699
+      dmag:0.952, dmagFin:1.193, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 25.247 s
+-----------------------------------------------------------------
+idav:9, idsps: 7,  ntrans: 396,  barrier:0.646,  ebias: 0.554
+      dmag:0.864, dmagFin:1.213, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 30.042 s
+-----------------------------------------------------------------
+idav:9, idsps: 8,  ntrans: 434,  barrier:0.648,  ebias: 0.554
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 31.739 s
+-----------------------------------------------------------------
+idav:9, idsps: 9,  ntrans: 330,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 22.946 s
+-----------------------------------------------------------------
+Found 6 saddle points in 9 precursor volume!
+-----------------------------------------------------------------
+Total time for 9 precursor volume: 247.203 s
+-----------------------------------------------------------------
+Precursor ID: 10 nactive:172 nbuffer:166 nfixed:1556
+Precursor center fractional coords: (0.7922, 0.30003, 3e-05)
+idav:10, idsps: 0,  ntrans: 359,  barrier:0.645,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 27.876 s
+-----------------------------------------------------------------
+idav:10, idsps: 1,  ntrans: 392,  barrier:0.645,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 31.685 s
+-----------------------------------------------------------------
+idav:10, idsps: 2,  ntrans: 318,  barrier:0.645,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 24.49 s
+-----------------------------------------------------------------
+idav:10, idsps: 3,  ntrans: 343,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 27.183 s
+-----------------------------------------------------------------
+idav:10, idsps: 4,  ntrans: 347,  barrier:0.646,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 25.746 s
+-----------------------------------------------------------------
+idav:10, idsps: 5,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.855, dmagFin:0.855, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 21.764 s
+-----------------------------------------------------------------
+idav:10, idsps: 6,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.857, dmagFin:0.857, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 24.1 s
+-----------------------------------------------------------------
+idav:10, idsps: 7,  ntrans: 319,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.213, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 22.841 s
+-----------------------------------------------------------------
+idav:10, idsps: 8,  ntrans: 291,  barrier:0.645,  ebias: 0.552
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 20.276 s
+-----------------------------------------------------------------
+idav:10, idsps: 9,  ntrans: 420,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.213, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 34.468 s
+-----------------------------------------------------------------
+Found 4 saddle points in 10 precursor volume!
+-----------------------------------------------------------------
+Total time for 10 precursor volume: 260.439 s
+-----------------------------------------------------------------
+Precursor ID: 11 nactive:176 nbuffer:172 nfixed:1556
+Precursor center fractional coords: (0.67262, 0.70004, 0.20008)
+idav:11, idsps: 0,  ntrans: 614,  barrier:0.69,  ebias: 0.627
+      dmag:0.926, dmagFin:1.223, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 46.954 s
+-----------------------------------------------------------------
+idav:11, idsps: 1,  ntrans: 282,  barrier:0.673,  ebias: 0.607
+      dmag:0.912, dmagFin:1.204, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 21.106 s
+-----------------------------------------------------------------
+idav:11, idsps: 2,  ntrans: 593,  barrier:0.612,  ebias: -0.014
+      dmag:1.511, dmagFin:2.254, isConnect: False
+      Valid SPs: 2, num of SPs:2, time: 45.945 s
+-----------------------------------------------------------------
+idav:11, idsps: 3,  ntrans: 293,  barrier:0.673,  ebias: 0.607
+      dmag:0.912, dmagFin:1.204, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 22.181 s
+-----------------------------------------------------------------
+idav:11, idsps: 4,  ntrans: 278,  barrier:0.647,  ebias: 0.554
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 18.386 s
+-----------------------------------------------------------------
+idav:11, idsps: 5,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.898, dmagFin:0.898, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 21.663 s
+-----------------------------------------------------------------
+idav:11, idsps: 6,  ntrans: 324,  barrier:0.647,  ebias: 0.554
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 22.543 s
+-----------------------------------------------------------------
+idav:11, idsps: 7,  ntrans: 400,  barrier:20.0,  ebias: 20.0
+      dmag:0.858, dmagFin:0.858, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 30.124 s
+-----------------------------------------------------------------
+idav:11, idsps: 8,  ntrans: 307,  barrier:0.644,  ebias: 0.55
+      dmag:0.864, dmagFin:1.216, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 22.945 s
+-----------------------------------------------------------------
+idav:11, idsps: 9,  ntrans: 292,  barrier:0.646,  ebias: 0.552
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 20.268 s
+-----------------------------------------------------------------
+Found 3 saddle points in 11 precursor volume!
+-----------------------------------------------------------------
+Total time for 11 precursor volume: 272.127 s
+-----------------------------------------------------------------
+Precursor ID: 12 nactive:182 nbuffer:181 nfixed:1548
+Precursor center fractional coords: (0.75312, 0.28826, 0.42362)
+idav:12, idsps: 0,  ntrans: 273,  barrier:0.645,  ebias: 0.552
+      dmag:0.866, dmagFin:1.217, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 20.468 s
+-----------------------------------------------------------------
+idav:12, idsps: 1,  ntrans: 289,  barrier:0.663,  ebias: 0.575
+      dmag:0.898, dmagFin:1.229, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 20.702 s
+-----------------------------------------------------------------
+idav:12, idsps: 2,  ntrans: 244,  barrier:0.663,  ebias: 0.575
+      dmag:0.898, dmagFin:1.229, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 18.369 s
+-----------------------------------------------------------------
+idav:12, idsps: 3,  ntrans: 269,  barrier:0.645,  ebias: 0.552
+      dmag:0.866, dmagFin:1.217, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 20.218 s
+-----------------------------------------------------------------
+idav:12, idsps: 4,  ntrans: 300,  barrier:20.0,  ebias: 20.0
+      dmag:0.884, dmagFin:0.884, isConnect: False
+      Valid SPs: 2, num of SPs:2, time: 21.691 s
+-----------------------------------------------------------------
+idav:12, idsps: 5,  ntrans: 275,  barrier:0.663,  ebias: 0.575
+      dmag:0.898, dmagFin:1.229, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 19.437 s
+-----------------------------------------------------------------
+idav:12, idsps: 6,  ntrans: 364,  barrier:0.638,  ebias: 0.544
+      dmag:0.862, dmagFin:1.215, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 27.38 s
+-----------------------------------------------------------------
+idav:12, idsps: 7,  ntrans: 391,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 28.816 s
+-----------------------------------------------------------------
+idav:12, idsps: 8,  ntrans: 312,  barrier:0.66,  ebias: 0.574
+      dmag:0.894, dmagFin:1.222, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 23.678 s
+-----------------------------------------------------------------
+idav:12, idsps: 9,  ntrans: 415,  barrier:0.651,  ebias: 0.555
+      dmag:0.861, dmagFin:1.213, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 29.335 s
+-----------------------------------------------------------------
+Found 3 saddle points in 12 precursor volume!
+-----------------------------------------------------------------
+Total time for 12 precursor volume: 230.105 s
+-----------------------------------------------------------------
+Precursor ID: 13 nactive:172 nbuffer:166 nfixed:1556
+Precursor center fractional coords: (0.80779, 0.30003, 3e-05)
+idav:13, idsps: 0,  ntrans: 326,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.213, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 23.818 s
+-----------------------------------------------------------------
+idav:13, idsps: 1,  ntrans: 313,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 22.349 s
+-----------------------------------------------------------------
+idav:13, idsps: 2,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.851, dmagFin:0.851, isConnect: False
+      Valid SPs: 2, num of SPs:2, time: 25.752 s
+-----------------------------------------------------------------
+idav:13, idsps: 3,  ntrans: 363,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 27.039 s
+-----------------------------------------------------------------
+idav:13, idsps: 4,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.857, dmagFin:0.857, isConnect: False
+      Valid SPs: 3, num of SPs:3, time: 21.776 s
+-----------------------------------------------------------------
+idav:13, idsps: 5,  ntrans: 370,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 24.033 s
+-----------------------------------------------------------------
+idav:13, idsps: 6,  ntrans: 299,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 19.393 s
+-----------------------------------------------------------------
+idav:13, idsps: 7,  ntrans: 356,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.213, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 22.444 s
+-----------------------------------------------------------------
+idav:13, idsps: 8,  ntrans: 350,  barrier:20.0,  ebias: 20.0
+      dmag:0.857, dmagFin:0.857, isConnect: False
+      Valid SPs: 5, num of SPs:5, time: 22.342 s
+-----------------------------------------------------------------
+idav:13, idsps: 9,  ntrans: 371,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 24.044 s
+-----------------------------------------------------------------
+Found 3 saddle points in 13 precursor volume!
+-----------------------------------------------------------------
+Total time for 13 precursor volume: 232.998 s
+-----------------------------------------------------------------
+
+Finished SPS on precursor volumes of 0 AV and found 62 saddle points.
+The first 62 lowest barrier saddle points are subjected to insituGSPS.
+-----------------------------------------------------------------
+Number of atoms 1236 of 0 active volume is larger than NMax4SNC 1000!
+Program will swtich SNC = False for this active volume.
+If want to use SNC, terminate program, change NMax4SNC and rerun it.
+ActVol ID: 0 nactive:1236 nbuffer:473 nfixed:281
+AV center fractional coords: (0.00329, 0.99119, 0.92801)
+idav:0, idsps: 0,  ntrans: 41,  barrier:0.644,  ebias: 0.551
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 3.115 s
+-----------------------------------------------------------------
+idav:0, idsps: 1,  ntrans: 43,  barrier:0.645,  ebias: 0.552
+      dmag:0.865, dmagFin:1.214, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 3.233 s
+-----------------------------------------------------------------
+idav:0, idsps: 2,  ntrans: 44,  barrier:0.646,  ebias: 0.55
+      dmag:0.87, dmagFin:1.219, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 3.262 s
+-----------------------------------------------------------------
+idav:0, idsps: 3,  ntrans: 44,  barrier:0.645,  ebias: 0.552
+      dmag:0.867, dmagFin:1.215, isConnect: True
+      Valid SPs: 4, num of SPs:4, time: 3.35 s
+-----------------------------------------------------------------
+idav:0, idsps: 4,  ntrans: 44,  barrier:0.644,  ebias: 0.551
+      dmag:0.876, dmagFin:1.222, isConnect: True
+      Valid SPs: 5, num of SPs:5, time: 3.292 s
+-----------------------------------------------------------------
+idav:0, idsps: 5,  ntrans: 44,  barrier:0.645,  ebias: 0.552
+      dmag:0.867, dmagFin:1.215, isConnect: True
+      Valid SPs: 6, num of SPs:6, time: 3.265 s
+-----------------------------------------------------------------
+idav:0, idsps: 6,  ntrans: 45,  barrier:0.642,  ebias: 0.55
+      dmag:0.873, dmagFin:1.219, isConnect: True
+      Valid SPs: 7, num of SPs:7, time: 3.332 s
+-----------------------------------------------------------------
+idav:0, idsps: 7,  ntrans: 42,  barrier:0.645,  ebias: 0.551
+      dmag:0.866, dmagFin:1.217, isConnect: True
+      Valid SPs: 8, num of SPs:8, time: 3.16 s
+-----------------------------------------------------------------
+idav:0, idsps: 8,  ntrans: 42,  barrier:0.636,  ebias: 0.542
+      dmag:0.867, dmagFin:1.218, isConnect: True
+      Valid SPs: 9, num of SPs:9, time: 3.218 s
+-----------------------------------------------------------------
+idav:0, idsps: 9,  ntrans: 43,  barrier:0.645,  ebias: 0.552
+      dmag:0.866, dmagFin:1.215, isConnect: True
+      Valid SPs: 10, num of SPs:10, time: 3.2 s
+-----------------------------------------------------------------
+idav:0, idsps: 10,  ntrans: 41,  barrier:0.645,  ebias: 0.552
+      dmag:0.869, dmagFin:1.216, isConnect: True
+      Valid SPs: 11, num of SPs:11, time: 3.114 s
+-----------------------------------------------------------------
+idav:0, idsps: 11,  ntrans: 44,  barrier:0.644,  ebias: 0.551
+      dmag:0.871, dmagFin:1.217, isConnect: True
+      Valid SPs: 12, num of SPs:12, time: 3.303 s
+-----------------------------------------------------------------
+idav:0, idsps: 12,  ntrans: 44,  barrier:0.645,  ebias: 0.569
+      dmag:0.89, dmagFin:1.207, isConnect: True
+      Valid SPs: 13, num of SPs:13, time: 3.294 s
+-----------------------------------------------------------------
+idav:0, idsps: 13,  ntrans: 42,  barrier:0.43,  ebias: 0.34
+      dmag:0.785, dmagFin:1.17, isConnect: True
+      Valid SPs: 14, num of SPs:14, time: 3.194 s
+-----------------------------------------------------------------
+idav:0, idsps: 14,  ntrans: 42,  barrier:0.43,  ebias: 0.339
+      dmag:0.782, dmagFin:1.17, isConnect: True
+      Valid SPs: 15, num of SPs:15, time: 3.342 s
+-----------------------------------------------------------------
+idav:0, idsps: 15,  ntrans: 43,  barrier:0.643,  ebias: 0.566
+      dmag:0.883, dmagFin:1.205, isConnect: True
+      Valid SPs: 16, num of SPs:16, time: 3.233 s
+-----------------------------------------------------------------
+idav:0, idsps: 16,  ntrans: 42,  barrier:0.649,  ebias: 0.573
+      dmag:0.887, dmagFin:1.207, isConnect: True
+      Valid SPs: 17, num of SPs:17, time: 3.188 s
+-----------------------------------------------------------------
+idav:0, idsps: 17,  ntrans: 43,  barrier:0.637,  ebias: 0.548
+      dmag:0.876, dmagFin:1.227, isConnect: True
+      Valid SPs: 18, num of SPs:18, time: 3.25 s
+-----------------------------------------------------------------
+idav:0, idsps: 18,  ntrans: 43,  barrier:0.634,  ebias: 0.546
+      dmag:0.877, dmagFin:1.227, isConnect: True
+      Valid SPs: 19, num of SPs:19, time: 3.216 s
+-----------------------------------------------------------------
+idav:0, idsps: 19,  ntrans: 39,  barrier:0.648,  ebias: 0.558
+      dmag:0.872, dmagFin:1.216, isConnect: True
+      Valid SPs: 20, num of SPs:20, time: 3.14 s
+-----------------------------------------------------------------
+idav:0, idsps: 20,  ntrans: 44,  barrier:0.638,  ebias: 0.55
+      dmag:0.877, dmagFin:1.227, isConnect: True
+      Valid SPs: 21, num of SPs:21, time: 3.357 s
+-----------------------------------------------------------------
+idav:0, idsps: 21,  ntrans: 41,  barrier:0.635,  ebias: 0.547
+      dmag:0.875, dmagFin:1.226, isConnect: True
+      Valid SPs: 22, num of SPs:22, time: 3.116 s
+-----------------------------------------------------------------
+idav:0, idsps: 22,  ntrans: 43,  barrier:0.642,  ebias: 0.552
+      dmag:0.873, dmagFin:1.214, isConnect: True
+      Valid SPs: 23, num of SPs:23, time: 3.199 s
+-----------------------------------------------------------------
+idav:0, idsps: 23,  ntrans: 44,  barrier:0.636,  ebias: 0.548
+      dmag:0.876, dmagFin:1.227, isConnect: True
+      Valid SPs: 24, num of SPs:24, time: 3.258 s
+-----------------------------------------------------------------
+idav:0, idsps: 24,  ntrans: 44,  barrier:0.632,  ebias: 0.545
+      dmag:0.878, dmagFin:1.228, isConnect: True
+      Valid SPs: 25, num of SPs:25, time: 3.278 s
+-----------------------------------------------------------------
+idav:0, idsps: 25,  ntrans: 43,  barrier:0.634,  ebias: 0.546
+      dmag:0.878, dmagFin:1.228, isConnect: True
+      Valid SPs: 26, num of SPs:26, time: 3.293 s
+-----------------------------------------------------------------
+idav:0, idsps: 26,  ntrans: 42,  barrier:0.633,  ebias: 0.544
+      dmag:0.874, dmagFin:1.228, isConnect: True
+      Valid SPs: 27, num of SPs:27, time: 3.193 s
+-----------------------------------------------------------------
+idav:0, idsps: 27,  ntrans: 43,  barrier:0.645,  ebias: 0.551
+      dmag:0.866, dmagFin:1.215, isConnect: True
+      Valid SPs: 28, num of SPs:28, time: 3.202 s
+-----------------------------------------------------------------
+idav:0, idsps: 28,  ntrans: 45,  barrier:0.644,  ebias: 0.551
+      dmag:0.87, dmagFin:1.217, isConnect: True
+      Valid SPs: 29, num of SPs:29, time: 3.314 s
+-----------------------------------------------------------------
+idav:0, idsps: 29,  ntrans: 40,  barrier:0.645,  ebias: 0.552
+      dmag:0.864, dmagFin:1.215, isConnect: True
+      Valid SPs: 30, num of SPs:30, time: 3.046 s
+-----------------------------------------------------------------
+idav:0, idsps: 30,  ntrans: 43,  barrier:0.646,  ebias: 0.552
+      dmag:0.865, dmagFin:1.214, isConnect: True
+      Valid SPs: 31, num of SPs:31, time: 3.285 s
+-----------------------------------------------------------------
+idav:0, idsps: 31,  ntrans: 42,  barrier:0.646,  ebias: 0.552
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 32, num of SPs:32, time: 3.136 s
+-----------------------------------------------------------------
+idav:0, idsps: 32,  ntrans: 41,  barrier:0.646,  ebias: 0.553
+      dmag:0.864, dmagFin:1.214, isConnect: True
+      Valid SPs: 33, num of SPs:33, time: 3.218 s
+-----------------------------------------------------------------
+idav:0, idsps: 33,  ntrans: 44,  barrier:0.649,  ebias: 0.562
+      dmag:0.883, dmagFin:1.218, isConnect: True
+      Valid SPs: 34, num of SPs:34, time: 3.289 s
+-----------------------------------------------------------------
+idav:0, idsps: 34,  ntrans: 42,  barrier:0.644,  ebias: 0.552
+      dmag:0.869, dmagFin:1.215, isConnect: True
+      Valid SPs: 35, num of SPs:35, time: 3.145 s
+-----------------------------------------------------------------
+idav:0, idsps: 35,  ntrans: 44,  barrier:0.655,  ebias: 0.568
+      dmag:0.884, dmagFin:1.222, isConnect: True
+      Valid SPs: 36, num of SPs:36, time: 3.31 s
+-----------------------------------------------------------------
+idav:0, idsps: 36,  ntrans: 45,  barrier:0.648,  ebias: 0.56
+      dmag:0.881, dmagFin:1.218, isConnect: True
+      Valid SPs: 37, num of SPs:37, time: 3.413 s
+-----------------------------------------------------------------
+idav:0, idsps: 37,  ntrans: 43,  barrier:0.649,  ebias: 0.562
+      dmag:0.883, dmagFin:1.218, isConnect: True
+      Valid SPs: 37, num of SPs:37, time: 3.239 s
+-----------------------------------------------------------------
+idav:0, idsps: 38,  ntrans: 43,  barrier:0.641,  ebias: 0.548
+      dmag:0.868, dmagFin:1.218, isConnect: True
+      Valid SPs: 38, num of SPs:38, time: 3.26 s
+-----------------------------------------------------------------
+idav:0, idsps: 39,  ntrans: 43,  barrier:0.642,  ebias: 0.552
+      dmag:0.872, dmagFin:1.217, isConnect: True
+      Valid SPs: 39, num of SPs:39, time: 3.277 s
+-----------------------------------------------------------------
+idav:0, idsps: 40,  ntrans: 43,  barrier:0.639,  ebias: 0.547
+      dmag:0.868, dmagFin:1.217, isConnect: True
+      Valid SPs: 40, num of SPs:40, time: 3.254 s
+-----------------------------------------------------------------
+idav:0, idsps: 41,  ntrans: 43,  barrier:0.642,  ebias: 0.549
+      dmag:0.868, dmagFin:1.217, isConnect: True
+      Valid SPs: 41, num of SPs:41, time: 3.212 s
+-----------------------------------------------------------------
+idav:0, idsps: 42,  ntrans: 44,  barrier:0.648,  ebias: 0.56
+      dmag:0.881, dmagFin:1.218, isConnect: True
+      Valid SPs: 41, num of SPs:41, time: 3.343 s
+-----------------------------------------------------------------
+idav:0, idsps: 43,  ntrans: 48,  barrier:0.642,  ebias: 0.55
+      dmag:0.873, dmagFin:1.219, isConnect: True
+      Valid SPs: 41, num of SPs:41, time: 3.573 s
+-----------------------------------------------------------------
+idav:0, idsps: 44,  ntrans: 40,  barrier:0.642,  ebias: 0.55
+      dmag:0.871, dmagFin:1.218, isConnect: True
+      Valid SPs: 42, num of SPs:42, time: 3.095 s
+-----------------------------------------------------------------
+idav:0, idsps: 45,  ntrans: 43,  barrier:0.645,  ebias: 0.552
+      dmag:0.865, dmagFin:1.214, isConnect: True
+      Valid SPs: 43, num of SPs:43, time: 3.247 s
+-----------------------------------------------------------------
+idav:0, idsps: 46,  ntrans: 43,  barrier:0.644,  ebias: 0.552
+      dmag:0.87, dmagFin:1.217, isConnect: True
+      Valid SPs: 44, num of SPs:44, time: 3.204 s
+-----------------------------------------------------------------
+idav:0, idsps: 47,  ntrans: 43,  barrier:0.643,  ebias: 0.551
+      dmag:0.87, dmagFin:1.217, isConnect: True
+      Valid SPs: 45, num of SPs:45, time: 3.217 s
+-----------------------------------------------------------------
+idav:0, idsps: 48,  ntrans: 44,  barrier:0.644,  ebias: 0.552
+      dmag:0.872, dmagFin:1.218, isConnect: True
+      Valid SPs: 46, num of SPs:46, time: 3.419 s
+-----------------------------------------------------------------
+idav:0, idsps: 49,  ntrans: 42,  barrier:0.644,  ebias: 0.551
+      dmag:0.865, dmagFin:1.215, isConnect: True
+      Valid SPs: 47, num of SPs:47, time: 3.176 s
+-----------------------------------------------------------------
+idav:0, idsps: 50,  ntrans: 43,  barrier:0.643,  ebias: 0.551
+      dmag:0.869, dmagFin:1.217, isConnect: True
+      Valid SPs: 48, num of SPs:48, time: 3.204 s
+-----------------------------------------------------------------
+idav:0, idsps: 51,  ntrans: 44,  barrier:0.643,  ebias: 0.551
+      dmag:0.868, dmagFin:1.216, isConnect: True
+      Valid SPs: 49, num of SPs:49, time: 3.373 s
+-----------------------------------------------------------------
+idav:0, idsps: 52,  ntrans: 42,  barrier:0.642,  ebias: 0.551
+      dmag:0.871, dmagFin:1.216, isConnect: True
+      Valid SPs: 50, num of SPs:50, time: 3.192 s
+-----------------------------------------------------------------
+idav:0, idsps: 53,  ntrans: 45,  barrier:0.639,  ebias: 0.546
+      dmag:0.87, dmagFin:1.228, isConnect: True
+      Valid SPs: 51, num of SPs:51, time: 3.405 s
+-----------------------------------------------------------------
+idav:0, idsps: 54,  ntrans: 46,  barrier:0.613,  ebias: 0.529
+      dmag:0.864, dmagFin:1.207, isConnect: True
+      Valid SPs: 52, num of SPs:52, time: 3.526 s
+-----------------------------------------------------------------
+idav:0, idsps: 55,  ntrans: 44,  barrier:0.641,  ebias: 0.55
+      dmag:0.872, dmagFin:1.218, isConnect: True
+      Valid SPs: 53, num of SPs:53, time: 3.285 s
+-----------------------------------------------------------------
+idav:0, idsps: 56,  ntrans: 43,  barrier:0.635,  ebias: 0.542
+      dmag:0.865, dmagFin:1.217, isConnect: True
+      Valid SPs: 54, num of SPs:54, time: 3.216 s
+-----------------------------------------------------------------
+idav:0, idsps: 57,  ntrans: 43,  barrier:0.644,  ebias: 0.551
+      dmag:0.866, dmagFin:1.215, isConnect: True
+      Valid SPs: 55, num of SPs:55, time: 3.258 s
+-----------------------------------------------------------------
+idav:0, idsps: 58,  ntrans: 43,  barrier:0.636,  ebias: 0.542
+      dmag:0.867, dmagFin:1.218, isConnect: True
+      Valid SPs: 55, num of SPs:55, time: 3.271 s
+-----------------------------------------------------------------
+idav:0, idsps: 59,  ntrans: 42,  barrier:0.644,  ebias: 0.552
+      dmag:0.865, dmagFin:1.214, isConnect: True
+      Valid SPs: 56, num of SPs:56, time: 3.187 s
+-----------------------------------------------------------------
+idav:0, idsps: 60,  ntrans: 40,  barrier:0.644,  ebias: 0.551
+      dmag:0.866, dmagFin:1.216, isConnect: True
+      Valid SPs: 57, num of SPs:57, time: 3.136 s
+-----------------------------------------------------------------
+idav:0, idsps: 61,  ntrans: 42,  barrier:0.644,  ebias: 0.552
+      dmag:0.865, dmagFin:1.214, isConnect: True
+      Valid SPs: 58, num of SPs:58, time: 3.165 s
+-----------------------------------------------------------------
+Found 58 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 201.52 s
+-----------------------------------------------------------------
+In KMC step ...
+Current basin info at 0 KMC step - ID:0 Number of saddle points:58 ID of selection:[14]
+                  Selected event - Barrier:0.43 Backward barrier:0.091
+-----------------------------------------------------------------
+Relaxing the structure ...
+KMC 0th step is finished.
+Time step for 0 KMC step: 21.769 ps
+Summed time steps after 0 KMC step: 21.769 ps
+Real time cost for 0 KMC step: 4360.437 s
+===================================================================
+Total KMC time steps for this simulation: 21.769 ps
+Real time cost for this simulation:4360.95 s
+===================================================================
