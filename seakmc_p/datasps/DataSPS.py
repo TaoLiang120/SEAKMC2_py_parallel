@@ -535,8 +535,8 @@ def Send_Results(thiscolor, iav, idav, idsps, thisSP, thisVN, time_spsearch, nts
         thiscomm.send(OptResults[9], dest=0, tag=itag + 19)
         thiscomm.send(OptResults[10], dest=0, tag=itag + 20)
         if not PreLoadDisps:
-            thiscomm.send(OptResults[12], dest=0, tag=itag + 21)
-            thiscomm.send(OptResults[13], dest=0, tag=itag + 22)
+            thiscomm.send(OptResults[11], dest=0, tag=itag + 21)
+            thiscomm.send(OptResults[12], dest=0, tag=itag + 22)
 
 
 ###############################################
