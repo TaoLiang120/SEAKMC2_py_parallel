@@ -19,6 +19,7 @@ __date__ = "October 7th, 2021"
 
 comm_world = MPI.COMM_WORLD
 rank_world = comm_world.Get_rank()
+size_world = comm_world.Get_size()
 
 NDISPARRAY = 3
 SEQUENCE_DISPARRAY = ["SP", "FS", "FI"]
@@ -240,10 +241,10 @@ class Settings:
         thisdata["PBC"] = PBC
         #########################################################
         Relaxation = {"BoxRelax": False, "InitTemp4Opt": 0.0, "TargetTemp4NVT": 5.0, "NVTSteps4Opt": 10000}
-        thisfeval = {"Bin": "pylammps", "Path2Bin": False, "Style": "pylammps", "nproc": 1, "processors": False,
+        thisfeval = {"Bin": "pylammps", "Path2Bin": False, "Style": "pylammps", "nproc": "auto", "processors": False,
                      "partition": False,
                      "Screen": False, "LogFile": False, "NSteps4Relax": 10000, "timestep": 0.002,
-                     "nproc4ReCal": 1, "RinputOpt": False, "RinputMD0": False,
+                     "nproc4ReCal": "auto", "RinputOpt": False, "RinputMD0": False,
                      "ImportValue4RinputOpt": False, "Keys4ImportValue4RinputOpt": [["Timestep", "time_step"]],
                      "OutFileHeaders": [], "Relaxation": Relaxation}
 
@@ -276,6 +277,12 @@ class Settings:
                         del thisfeval["OutFileHeaders"][i]
         else:
             thisfeval["OutFileHeaders"] = []
+
+        if not isinstance(thisfeval["nproc"], int):
+            thisfeval["nproc"] = size_world
+
+        if not isinstance(thisfeval["nproc4ReCal"], int):
+            thisfeval["nproc4ReCal"] = size_world
 
         if thisfeval["Style"].lower() == "pylammps":
             thisfeval["Bin"] = "pylammps"
