@@ -10,6 +10,7 @@ from seakmc_p.core.util import mat_lengths, mat_angles, mats_angles, mats_angle,
 from seakmc_p.input.Input import SP_COMPACT_HEADER, SP_COMPACT_HEADER4Delete, DEFECTBANK_ATOMS_HEADER, \
     DEFECTBANK_DISPS_HEADER
 from seakmc_p.input.Input import SP_DATA_HEADER, NDISPARRAY, NENTRY_COMPACT_DISP
+from seakmc_p.mpiconf.error_exit import error_exit
 
 __author__ = "Tao Liang"
 __copyright__ = "Copyright 2021"
@@ -48,6 +49,7 @@ class SaddlePoint:
             dyncut=False,
             tol=0.1,
             precursor=False,
+            ikmc=0,
     ):
         self.idav = idav
         self.idsps = idsps
@@ -74,6 +76,7 @@ class SaddlePoint:
         self.DynCut = dyncut
         self.tol = tol
         self.precursor = precursor
+        self.ikmc = ikmc
 
         self.dtot, self.dmax, self.dna, self.dsum, self.adsum = self.info_from_displacement(DispStyle="SP")
         self.fdtot, self.fdmax, self.fdna, self.fdsum, self.fadsum = self.info_from_displacement(DispStyle="FI")
@@ -280,8 +283,7 @@ class SaddlePoint:
             thisval = abs(vmaxs[1]) / max(abs(vmaxs[2]), 1.0e-6)
         else:
             logstr = "Unrecognized displacement type for validation!"
-            print(logstr)
-            comm_world.Abort(rank_world)
+            error_exit(logstr)
         return thisval
 
     def get_energy_value(self, Etype="EBIAS"):
@@ -1352,6 +1354,7 @@ class Data_SPs:
             nSP=0,
             df_SPs=None,
             idavs=[],
+            idspss = [],
             disps=[],
             fdisps=[],
             AV_masks=None,
