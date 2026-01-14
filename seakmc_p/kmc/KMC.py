@@ -7,6 +7,7 @@ from mpi4py import MPI
 from seakmc_p.core.util import mat_mag
 from seakmc_p.input.Input import SP_KMC_HEADER, SP_DATA_HEADER
 from seakmc_p.input.Input import SP_KMC_SELECTED_HEADER, NENTRY_SELECTED_HEADER, NDISPARRAY, SEQUENCE_DISPARRAY
+from seakmc_p.mpiconf.error_exit import error_exit
 
 __author__ = "Tao Liang"
 __copyright__ = "Copyright 2021"
@@ -44,8 +45,8 @@ class Basin:
         self.nAV = len(DataSPs.idavs)
         self.nSP = DataSPs.nSP
         if self.nSP <= 0:
-            print("No saddle point in KMC step!")
-            comm_world.Abort(rank_world)
+            errormsg = "No saddle point in KMC step!"
+            error_exit(errormsg)
 
         self.localiba = np.array([self.id] * self.nSP, dtype=int)
         self.localiav = np.array(DataSPs.localiav, dtype=int)
@@ -560,13 +561,19 @@ class DataKMC:
         comm_world = MPI.COMM_WORLD
         if comm_world.Get_rank() == 0:
             df_SPs = pd.DataFrame(columns=SP_DATA_HEADER)
+            #print(SP_DATA_HEADER)
+            #cols = ['idav', 'idsps', 'barrier']
             for i in range(len(DataSPs.df_SPs)):
                 if len(DataSPs.df_SPs[i]) > 0:
+                    #print(DataSPs.df_SPs[i][cols])
+                    #print("---")
                     if len(df_SPs) == 0:
                         df_SPs = DataSPs.df_SPs[i].copy(deep=True)
                         df_SPs = df_SPs.reset_index(drop=True)
                     else:
                         df_SPs = pd.concat([df_SPs, DataSPs.df_SPs[i]], ignore_index=True)
+            #print(df_SPs[cols])
+            #print("===")
             idavs = df_SPs["idav"].to_numpy().astype(int)
             idspss = df_SPs["idsps"].to_numpy().astype(int)
             barriers = df_SPs["barrier"].to_numpy()
