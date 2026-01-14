@@ -1,5 +1,4 @@
 import time
-import time
 
 import numpy as np
 
@@ -45,7 +44,7 @@ def generate_VN(spsearchsett, thisVNS, nactive, SNC=False, dmAV=None):
 
 
 def spsearch_search_single(nproc_task, thiscolor, comm_split,
-                           idav, thissett, thisAV, thisSOPs, dynmatAV, SNC, CalPref, thisSPS, Pre_Disps,
+                           istep, idav, thissett, thisAV, thisSOPs, dynmatAV, SNC, CalPref, thisSPS, Pre_Disps,
                            idsps, thisVNS, object_dict, Precursor=False, insituGSPS=False):
     ticd = time.time()
     force_evaluator = object_dict['force_evaluator']
@@ -63,7 +62,8 @@ def spsearch_search_single(nproc_task, thiscolor, comm_split,
             Pre_Disps[idsps] = np.array([])
         thisspsearch = Dimer(idav, idsps, thisAVd, thissett, thiscolor, force_evaluator,
                              SNC=SNC, dmAV=dynmatAV, pre_disps=thispredisp, apply_mass=thissett.spsearch["ApplyMass"],
-                             comm=comm_split, insituGSPS=insituGSPS)
+                             comm=comm_split, insituGSPS=insituGSPS, ikmc=istep,
+                             DynMatOutpath=object_dict['out_paths'][5])
 
         thisspsearch.dimer_init(thisVN)
         thisspsearch.dimer_search(thisSPS)
@@ -86,7 +86,7 @@ def spsearch_search_single(nproc_task, thiscolor, comm_split,
                          iters=thisspsearch.iter, ntrans=thisspsearch.NTSITR, emax=thisspsearch.EDIFF_MAX,
                          rdcut=thissett.spsearch["R2Dmax4SPAtom"], dcut=thissett.spsearch["DCut4SPAtom"],
                          dyncut=thissett.spsearch["DynCut4SPAtom"],
-                         tol=thissett.system["Tolerance"], precursor=Precursor)
+                         tol=thissett.system["Tolerance"], precursor=Precursor, ikmc=istep)
 
     tocd = time.time()
     return thisSP, thisVN, tocd - ticd, thisspsearch.NTSITR
