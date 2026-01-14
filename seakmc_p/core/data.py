@@ -23,6 +23,7 @@ from pymatgen.symmetry.analyzer import (
 from seakmc_p.input.Input import Global_Variables
 from seakmc_p.core.util import mat_lengths, mat_angles, mat_mag, generate_rotation_matrix
 import seakmc_p.mpiconf.MPIconf as mympi
+from seakmc_p.mpiconf.error_exit import error_exit
 
 __author__ = "Tao Liang"
 __copyright__ = "Copyright 2021"
@@ -135,15 +136,15 @@ class SeakmcData(LammpsData, MSONable):
             atom_style=atom_style, )
 
         if self.atoms.index.has_duplicates:
-            print("The input data have duplicated atom ID.")
-            comm_world.Abort(rank_world)
+            logstr = "The input data have duplicated atom ID."
+            error_exit(logstr)
 
         self.natoms = len(self.atoms)
         try:
             self.idmax = self.atoms.index.max()
         except:
-            print("The input data have no atom ID.")
-            comm_world.Abort(rank_world)
+            logstr = "The input data have no atom ID."
+            error_exit(logstr)
 
         self.atoms = self.atoms[ATOMS_HEADERS[self.atom_style]]
         self.velocities = None
@@ -187,8 +188,8 @@ class SeakmcData(LammpsData, MSONable):
     def assert_settings(self, settings):
         self.sett = copy.deepcopy(settings)
         if len(self.masses) != len(self.sett.potential["masses"]):
-            print("Inconsistent number of atom types in data and input!")
-            comm_world.Abort(rank_world)
+            logstr = "Inconsistent number of atom types in data and input!"
+            error_exit(logstr)
         self.masses = pd.DataFrame(self.sett.potential["masses"], columns=["mass"],
                                    index=np.arange(len(self.sett.potential["masses"]), dtype=int) + 1)
         self.force_field = self.sett.potential["force_field"]
@@ -223,9 +224,7 @@ class SeakmcData(LammpsData, MSONable):
                 logstr = f"Number of predefined defects is 0 in input.yaml!"
                 logstr += "\n" + f"But found {len(idmols)} predefined defects in data file!"
                 logstr += "\n" + f"Reset NPredef in active_volume of input.yaml and rerun the code."
-                if rank_world == 0:
-                    print(logstr)
-                    comm_world.Abort(rank_world)
+                error_exit(logstr)
 
     def insert_cusatoms(self, Sort_by='type', Ascending=True):
         cusatoms = self.atoms.copy()
@@ -404,8 +403,8 @@ class SeakmcData(LammpsData, MSONable):
         atom_dtype = atoms_array.dtype
         atom_entries = [key for key in atom_dtype.fields]
         if group_by not in atom_entries:
-            print(group_by + " is not in atom entries!")
-            comm_world.Abort(rank_world)
+            logstr = group_by + " is not in atom entries!"
+            error_exit(logstr)
 
         atoms_array = atoms_array[atoms_array[group_by].argsort()]
         info_tuples = np.unique(atoms_array[group_by], return_index=True, return_counts=True)
@@ -417,11 +416,12 @@ class SeakmcData(LammpsData, MSONable):
                        isHalf=False, indkey="itag"):
         if isinstance(atomdtype, np.dtype):
             if not indkey in atomdtype.fields:
-                print("The atoms must have itag entry!")
-                comm_world.Abort(rank_world)
+                logstr = "The atomdtype must have " + indkey + " entry!"
+                error_exit(logstr)
         else:
-            print("The atomdtype must be numpy dtype.")
-            comm_world.Abort(rank_world)
+            logstr = "The atomdtype must be numpy dtype."
+            error_exit(logstr)
+
 
         thisidcxyz = np.multiply(thiscoords, self.cell_dim).astype(int) + 1
         thisncid = np.dot(np.add(cell_neigh_array, thisidcxyz), self.cell_dim_multiplier)
@@ -446,21 +446,17 @@ class SeakmcData(LammpsData, MSONable):
 
     def build_neighbor_list(self, df, nReal, cutneighmax, Style="itag", isHalf=False):
         if "idc" not in df.columns:
-            print("The entry must contain cell id in build_neighbor_list!")
-            comm_world.Abort(rank_world)
+            logstr = "The entry must contain cell id  (idc) in build_neighbor_list!"
+            error_exit(logstr)
         if "itag" not in df.columns:
-            print("The entry must contain itag in build_neighbor_list!")
-            comm_world.Abort(rank_world)
+            logstr = "The entry must contain itag in build_neighbor_list!"
+            error_exit(logstr)
 
         indkey = "itag"
         if Style == "index": indkey = "index"
         if isinstance(cutneighmax, list):
             nlist = len(cutneighmax)
             cutneighmaxsq = np.array(cutneighmax) * np.array(cutneighmax)
-            if rank_world == 0:
-                logstr = "Cutneighmaxs must be sorted descendingly."
-                print(logstr)
-                #comm_world.Abort(rank_world)
         else:
             nlist = 1
             cutneighmaxsq = np.array([cutneighmax]) * np.array([cutneighmax])
@@ -770,8 +766,8 @@ class SeakmcData(LammpsData, MSONable):
                                        atom_style=self.sett.active_volume['FindDefects']["atom_style4Ref"])
         refdata.to_atom_style()
         if mat_mag(refdata.box.matrix - self.box.matrix) >= 1.0e-8:
-            print("Reference data has a different lattice!")
-            comm_world.Abort(rank_world)
+            logstr = "Reference data has a different lattice!"
+            error_exit(logstr)
 
         refdata.atoms = refdata.get_fractional_coords(refdata.atoms)
         refdata.atoms = refdata.insert_tags(refdata.atoms)
@@ -896,8 +892,8 @@ class SeakmcData(LammpsData, MSONable):
             elif "CN" in method or "BL" in method or "Q" in method:
                 defect_list2, dCN_list2 = self.BLCN_find_defects()
             else:
-                print("Not a valid method for finding defects!")
-                comm_world.Abort(rank_world)
+                logstr = "Not a valid method for finding defects!"
+                error_exit(logstr)
         else:
             defect_list2 = np.array([], dtype=thisdtype)
             dCN_list2 = []
@@ -1218,16 +1214,15 @@ class SeakmcData(LammpsData, MSONable):
             else:
                 defect_list, dCN_list = self.find_defects()
                 if len(defect_list) <= 0:
-                    print("No defect has been found!")
-                    comm_world.Abort(rank_world)
+                    logstr ="No defect has been found!"
+                    error_exit(logstr)
                 self.defects = pd.DataFrame(defect_list.T, columns=self.atoms.columns)
                 self.defects["dCN"] = dCN_list
 
         self.ndefects = len(self.defects)
         if self.ndefects < 1:
-            if rank_world == 0:
-                print("No defect has been found!")
-                comm_world.Abort(rank_world)
+            logstr = "No defect has been found!"
+            error_exit(logstr)
 
         if self.sett.active_volume['PDReduction']:
             if rank_world == 0:
@@ -1307,8 +1302,7 @@ class SeakmcData(LammpsData, MSONable):
                                f"The distance cut (DCut4Def) for defects is "
                                f"{100 * self.sett.active_volume['FindDefects']['DCut4Def']} % of bondlengths.")
                     logstr += "\n" + "Check the settings above, change them accordingly and rerun the code."
-                print(logstr)
-                comm_world.Abort(rank_world)
+                error_exit(logstr)
 
         thiscut = DActive
 
@@ -1462,8 +1456,7 @@ class SeakmcData(LammpsData, MSONable):
                 logstr += "\n" + "Maximum number of atoms in an active volume is " + str(
                     self.sett.active_volume["NMax4AV"]) + "!"
                 logstr += "\n" + "Change active_volume['NMax4AV'] in input.yaml and rerun it!"
-                print(logstr)
-                comm_world.Abort(rank_world)
+                error_exit(logstr)
 
         atoms_a = np.concatenate((active, buffer, fixed), axis=0)
         atoms = pd.DataFrame(atoms_a.T, columns=keys, index=np.arange(nt, dtype=int) + 1)
@@ -1485,8 +1478,7 @@ class SeakmcData(LammpsData, MSONable):
             logstr = "Number of active atoms in active volume is " + str(nactive) + "!"
             logstr += "\n" + "Minimum number of active atoms in an active volume is " + str(
                 self.sett.active_volume["NMin4AV"]) + "!"
-            print(logstr)
-            comm_world.Abort(rank_world)
+            error_exit(logstr)
         return av
 
     def get_av(self, idf, Sorting=True, Precursor=False):
@@ -1576,8 +1568,7 @@ class SeakmcData(LammpsData, MSONable):
                 logstr += "\n" + "Maximum number of atoms in an active volume is " + str(
                     self.sett.active_volume["NMax4AV"]) + "!"
                 logstr += "\n" + "Change active_volume['NMax4AV'] in input.yaml and rerun it!"
-                print(logstr)
-                comm_world.Abort(rank_world)
+                error_exit(logstr)
 
         if nactive >= self.sett.active_volume["NMin4AV"]:
             atoms = atoms[ATOMS_HEADERS[self.atom_style]]
@@ -1590,8 +1581,7 @@ class SeakmcData(LammpsData, MSONable):
             logstr = "Number of active atoms in active volume is " + str(nactive) + "!"
             logstr += "\n" + "Minimum number of active atoms in an active volume is " + str(
                 self.sett.active_volume["NMin4AV"]) + "!"
-            print(logstr)
-            comm_world.Abort(rank_world)
+            error_exit(logstr)
         return av
 
     def get_active_volume(self, idf, Rebuild=True, Precursor=False):
@@ -1720,8 +1710,8 @@ class SeakmcData(LammpsData, MSONable):
             try:
                 idavs = np.array([int(idavs)], dtype=int)
             except:
-                print("idavs must be integer or list of integers or 'ALL'.")
-                comm_world.Abort(rank_world)
+                logstr = "idavs must be integer or list of integers or 'ALL'."
+                error_exit(logstr)
 
         idavs = np.select([idavs < 0, idavs < newdata.ndefects, idavs >= newdata.ndefects],
                           [0, idavs, newdata.ndefects - 1])
