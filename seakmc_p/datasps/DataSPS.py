@@ -56,7 +56,7 @@ def AV_is_done(idav, iav, idsps, ticav_l, thisAV_l, AVstring_l, thisSPS_l,
     if thisSPS_l[iav].nSP > 0:
         thisDataSPs = postSPS.insert_AVSP2DataSPs(thisDataSPs, thisSPS_l[iav], idav, DFWriter, Precursor=Precursor)
         if Recycle and thissett.defect_bank["Recycle"]:
-                DefectBank_list = postSPS.add_to_DefectBank(thissett, thisAV_l[iav], thisSPS_l[iav], isRecycled_l[iav],
+            DefectBank_list = postSPS.add_to_DefectBank(thissett, thisAV_l[iav], thisSPS_l[iav], isRecycled_l[iav],
                                                             isPGSYMM_l[iav], thisSOPs_l[iav].sch_symbol,
                                                             DefectBank_list, out_paths[3])
         if Precursor:
