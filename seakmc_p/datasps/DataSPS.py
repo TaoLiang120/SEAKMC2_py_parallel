@@ -37,9 +37,8 @@ def AV_is_done(idav, iav, idsps, ticav_l, thisAV_l, AVstring_l, thisSPS_l,
                Pre_Disps_l, isRecycled_l, isPGSYMM_l, thisSOPs_l, SNC_l, CalPref_l, thisVNS_l,
                thisDataSPs, AVitags, df_delete_SPs, undo_idavs, finished_AVs, simulation_time,
                istep, thissett, seakmcdata, DefectBank_list, thisSuperBasin, Eground,
-               object_dict, Precursor=False, insituGSPS=False, WriteRestart=True, Recycle=False):
+               DFWriter, object_dict, Precursor=False, insituGSPS=False, WriteRestart=True, Recycle=False):
     LogWriter = object_dict['LogWriter']
-    DFWriter = object_dict['DFWriter']
     out_paths = object_dict['out_paths']
     ticav = ticav_l[iav]
     thisSPS_l[iav], df_delete_SPs = postSPS.SPs_1postprocessing(thissett, thisSPS_l[iav], df_delete_SPs, DFWriter,
@@ -106,11 +105,10 @@ def master_data_SPS(ntask_tot, nproc_task, ntask_time,
                     thisnspsearch, thisDataSPs, AVitags, df_delete_SPs, undo_idavs, finished_AVs, simulation_time,
                     this_idavs,
                     istep, thissett, seakmcdata, DefectBank_list, thisSuperBasin, Eground,
-                    object_dict, Pre_Disps_l=None, PreLoadDisps=False, Precursor=False, insituGSPS=False,
+                    DFWriter, object_dict, Pre_Disps_l=None, PreLoadDisps=False, Precursor=False, insituGSPS=False,
                     WriteRestart=True, Recycle=False):
     status = MPI.Status()
     LogWriter = object_dict['LogWriter']
-    DFWriter = object_dict['DFWriter']
     float_precision = thissett.system['float_precision']
     navs = len(undo_idavs)
     if thissett.spsearch["TaskDist"].upper() == "SPS":
@@ -222,7 +220,7 @@ def master_data_SPS(ntask_tot, nproc_task, ntask_time,
                                                                      finished_AVs, simulation_time,
                                                                      istep, thissett, seakmcdata, DefectBank_list,
                                                                      thisSuperBasin, Eground,
-                                                                     object_dict, Precursor=Precursor,
+                                                                     DFWriter, object_dict, Precursor=Precursor,
                                                                      insituGSPS=insituGSPS, WriteRestart=WriteRestart,
                                                                      Recycle=Recycle)
                     completed_avs[iav] = True
@@ -474,7 +472,7 @@ def slave_data_SPS(nproc_task, thiscolor, comm_split,
 def data_SPS_parrallel(nproc_task, start_proc, ntask_time, thiscolor, comm_split,
                        thisnspsearch, thisDataSPs, AVitags, df_delete_SPs, undo_idavs, finished_AVs, simulation_time,
                        istep, thissett, seakmcdata, DefectBank_list, thisSuperBasin, Eground,
-                       object_dict, Pre_Disps_l=None, PreLoadDisps=False, Precursor=False, insituGSPS=False,
+                       DFWriter, object_dict, Pre_Disps_l=None, PreLoadDisps=False, Precursor=False, insituGSPS=False,
                        WriteRestart=True,  Recycle=False):
     ntask_tot = len(undo_idavs) * thisnspsearch
     ntask_time = min(ntask_time, ntask_tot)
@@ -487,7 +485,7 @@ def data_SPS_parrallel(nproc_task, start_proc, ntask_time, thiscolor, comm_split
                                                               undo_idavs, finished_AVs, simulation_time, this_idavs,
                                                               istep, thissett, seakmcdata, DefectBank_list,
                                                               thisSuperBasin, Eground,
-                                                              object_dict, Pre_Disps_l=Pre_Disps_l,
+                                                              DFWriter, object_dict, Pre_Disps_l=Pre_Disps_l,
                                                               PreLoadDisps=PreLoadDisps, Precursor=Precursor,
                                                               insituGSPS=insituGSPS, WriteRestart=WriteRestart,
                                                               Recycle=Recycle)
@@ -546,12 +544,11 @@ def data_SPS_no_master_slave(nproc_task, start_proc, ntask_time, thiscolor, comm
                              thisnspsearch, thisDataSPs, AVitags, df_delete_SPs, undo_idavs, finished_AVs,
                              simulation_time,
                              istep, thissett, seakmcdata, DefectBank_list, thisSuperBasin, Eground,
-                             object_dict, Pre_Disps_l=None, PreLoadDisps=False, Precursor=False, insituGSPS=False,
+                             DFWriter, object_dict, Pre_Disps_l=None, PreLoadDisps=False, Precursor=False, insituGSPS=False,
                              WriteRestart=True, Recycle=False):
     rank_local = comm_split.Get_rank()
     float_precision = thissett.system['float_precision']
     LogWriter = object_dict['LogWriter']
-    DFWriter = object_dict['DFWriter']
 
     this_idavs = copy.deepcopy(undo_idavs)
     navs = len(undo_idavs)
@@ -820,7 +817,7 @@ def data_SPS_no_master_slave(nproc_task, start_proc, ntask_time, thiscolor, comm
                                                                  finished_AVs, simulation_time,
                                                                  istep, thissett, seakmcdata, DefectBank_list,
                                                                  thisSuperBasin, Eground,
-                                                                 object_dict, Precursor=Precursor,
+                                                                 DFWriter, object_dict, Precursor=Precursor,
                                                                  insituGSPS=insituGSPS, WriteRestart=WriteRestart,
                                                                  Recycle=Recycle)
 
@@ -913,7 +910,7 @@ def data_SPS_no_master_slave(nproc_task, start_proc, ntask_time, thiscolor, comm
                                                                      finished_AVs, simulation_time,
                                                                      istep, thissett, seakmcdata, DefectBank_list,
                                                                      thisSuperBasin, Eground,
-                                                                     object_dict, Precursor=Precursor,
+                                                                     DFWriter, object_dict, Precursor=Precursor,
                                                                      insituGSPS=insituGSPS, WriteRestart=WriteRestart,
                                                                      Recycle=Recycle)
                     local_coords_l[iav] = None
@@ -966,7 +963,8 @@ def data_SPS_no_master_slave(nproc_task, start_proc, ntask_time, thiscolor, comm
 
 #####################################################
 def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSuperBasin, Eground,
-                           DataSPs, AVitags, df_delete_SPs, undo_idavs, finished_AVs, simulation_time, object_dict):
+                           DataSPs, AVitags, df_delete_SPs, undo_idavs, finished_AVs, simulation_time,
+                           DFWriter, object_dict):
     nproc_task = thissett.spsearch["force_evaluator"]["nproc"]
     Master_Slave = thissett.spsearch["Master_Slave"]
     if Master_Slave:
@@ -1010,7 +1008,7 @@ def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSup
                                                                              thisfinished_AVs, simulation_time,
                                                                              istep, thissett, seakmcdata,
                                                                              DefectBank_list, thisSuperBasin, Eground,
-                                                                             object_dict, Pre_Disps_l=None,
+                                                                             DFWriter, object_dict, Pre_Disps_l=None,
                                                                              PreLoadDisps=False, Precursor=True,
                                                                              insituGSPS=False, WriteRestart=False,
                                                                              Recycle=True)
@@ -1024,7 +1022,7 @@ def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSup
                                                                                    istep, thissett, seakmcdata,
                                                                                    DefectBank_list, thisSuperBasin,
                                                                                    Eground,
-                                                                                   object_dict, Pre_Disps_l=None,
+                                                                                   DFWriter, object_dict, Pre_Disps_l=None,
                                                                                    PreLoadDisps=False, Precursor=True,
                                                                                    insituGSPS=False, WriteRestart=False,
                                                                                    Recycle=True)
@@ -1076,7 +1074,7 @@ def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSup
                                                                      thisundo_idavs, thisfinished_AVs, simulation_time,
                                                                      istep, thissett, seakmcdata, DefectBank_list,
                                                                      thisSuperBasin, Eground,
-                                                                     object_dict, Pre_Disps_l=Pre_Disps_l,
+                                                                     DFWriter, object_dict, Pre_Disps_l=Pre_Disps_l,
                                                                      PreLoadDisps=True, Precursor=False,
                                                                      insituGSPS=True, WriteRestart=False,
                                                                      Recycle=False)
@@ -1088,7 +1086,7 @@ def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSup
                                                                            thisfinished_AVs, simulation_time,
                                                                            istep, thissett, seakmcdata, DefectBank_list,
                                                                            thisSuperBasin, Eground,
-                                                                           object_dict, Pre_Disps_l=Pre_Disps_l,
+                                                                           DFWriter, object_dict, Pre_Disps_l=Pre_Disps_l,
                                                                            PreLoadDisps=True, Precursor=False,
                                                                            insituGSPS=True, WriteRestart=False,
                                                                            Recycle=False)
@@ -1113,7 +1111,7 @@ def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSup
                                                                  undo_idavs, finished_AVs, simulation_time,
                                                                  istep, thissett, seakmcdata, DefectBank_list,
                                                                  thisSuperBasin, Eground,
-                                                                 object_dict, Pre_Disps_l=None, PreLoadDisps=False,
+                                                                 DFWriter, object_dict, Pre_Disps_l=None, PreLoadDisps=False,
                                                                  Precursor=False, insituGSPS=False, WriteRestart=True,
                                                                  Recycle=True)
         else:
@@ -1123,7 +1121,7 @@ def data_find_saddlepoints(istep, thissett, seakmcdata, DefectBank_list, thisSup
                                                                        undo_idavs, finished_AVs, simulation_time,
                                                                        istep, thissett, seakmcdata, DefectBank_list,
                                                                        thisSuperBasin, Eground,
-                                                                       object_dict, Pre_Disps_l=None,
+                                                                       DFWriter, object_dict, Pre_Disps_l=None,
                                                                        PreLoadDisps=False, Precursor=False,
                                                                        insituGSPS=False, WriteRestart=True,
                                                                        Recycle=True)
