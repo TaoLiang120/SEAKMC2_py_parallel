@@ -57,13 +57,8 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
         last_de_center = None
 
     comm_world.Barrier()
-    MPI.Finalize()
 
     for istep in range(istep_this, thissett.kinetic_MC['NSteps']):
-        comm_world = MPI.COMM_WORLD
-        rank_world = comm_world.Get_rank()
-        size_world = comm_world.Get_size()
-
         if rank_world == 0:
             tickmc = time.time()
             DFWriter.init_deleted_SPs(istep)
@@ -83,8 +78,8 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
                 thisTDB = TrialDisp2Basin(seakmcdata, displacement, itrial, Eground=Eground,
                                           key=TDBsett["Keyword4RinputTDB"])
                 thisTDB.relax_basin(force_evaluator, LogWriter, ntask_tot=1,
-                                    nproc_task=thissett.force_evaluator["nproc"])
-                thisTDB.run_seakmc(istep, thissett, object_dict)
+                                    nproc_task=thissett.force_evaluator["nproc"], comm_world=comm_world)
+                thisTDB.run_seakmc(istep, thissett, object_dict, comm_world=comm_world)
                 if rank_world == 0:
                     thisTrialDisps.Add_one_trialdisp(thisTDB)
 
@@ -104,10 +99,6 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
             Eground = thisTDB.Eground
 
             comm_world.Barrier()
-            MPI.Finalize()
-            comm_world = MPI.COMM_WORLD
-            rank_world = comm_world.Get_rank()
-            size_world = comm_world.Get_size()
 
         if thisRestart is None:
             seakmcdata.get_defects(LogWriter, last_de_center=last_de_center)
@@ -272,6 +263,12 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
             LogWriter.write_data(logstr)
 
         comm_world.Barrier()
-        MPI.Finalize()
 
+        '''
+        MPI.COMM_WORLD.Abort(1)
+        MPI.Finalize()
+        comm_world = MPI.COMM_WORLD
+        rank_world = comm_world.Get_rank()
+        size_world = comm_world.Get_size()
+        '''
     return simulation_time

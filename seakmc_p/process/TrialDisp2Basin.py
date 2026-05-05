@@ -36,7 +36,6 @@ class TrialDisp2Basin:
         if comm_world is None:
             comm_world = MPI.COMM_WORLD
         rank_world = comm_world.Get_rank()
-        size_world = comm_world.Get_size()
 
         ntask_tot = 1
         [Eground, relaxed_coords, isValid, errormsg] = mydatadyn.data_dynamics("DATATDB", force_evaluator,
@@ -50,10 +49,10 @@ class TrialDisp2Basin:
                 LogWriter.write_data(errormsg)
                 error_exit(errormsg)
 
-    def run_seakmc(self, istep, thissett, object_dict):
-        comm_world = MPI.COMM_WORLD
+    def run_seakmc(self, istep, thissett, object_dict, comm_world=None):
+        if comm_world is None:
+            comm_world = MPI.COMM_WORLD
         rank_world = comm_world.Get_rank()
-        size_world = comm_world.Get_size()
 
         out_paths = object_dict['out_paths']
         LogWriter = object_dict['LogWriter']
