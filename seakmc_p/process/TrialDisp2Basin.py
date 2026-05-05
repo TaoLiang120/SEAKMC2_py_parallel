@@ -17,8 +17,6 @@ from seakmc_p.kmc.KMC import Basin
 from seakmc_p.mpiconf.error_exit import error_exit
 
 KB = 8.617333262145e-5
-comm_world = MPI.COMM_WORLD
-rank_world = comm_world.Get_rank()
 class TrialDisp2Basin:
     def __init__(self, seakmcdata, displacement, itrial, Eground=0.0, key="displacement"):
         self.seakmcdata = seakmcdata
@@ -34,7 +32,12 @@ class TrialDisp2Basin:
         self.meanpref = 10
         self.multiply_factor = 1000000
 
-    def relax_basin(self, force_evaluator, LogWriter, ntask_tot=1, nproc_task=1):
+    def relax_basin(self, force_evaluator, LogWriter, ntask_tot=1, nproc_task=1, comm_world=None):
+        if comm_world is None:
+            comm_world = MPI.COMM_WORLD
+        rank_world = comm_world.Get_rank()
+        size_world = comm_world.Get_size()
+
         ntask_tot = 1
         [Eground, relaxed_coords, isValid, errormsg] = mydatadyn.data_dynamics("DATATDB", force_evaluator,
                                                                                self.thisdata, ntask_tot,
@@ -142,7 +145,6 @@ class TrialDisp2Basin:
             LogWriter.write_data(logstr)
 
         comm_world.Barrier()
-        MPI.Finalize()
 
 def func1(x, a, b):
     return a * x + b

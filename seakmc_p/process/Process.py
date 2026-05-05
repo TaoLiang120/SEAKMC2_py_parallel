@@ -103,6 +103,12 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
             seakmcdata = copy.deepcopy(thisTDB.thisdata)
             Eground = thisTDB.Eground
 
+            comm_world.Barrier()
+            MPI.Finalize()
+            comm_world = MPI.COMM_WORLD
+            rank_world = comm_world.Get_rank()
+            size_world = comm_world.Get_size()
+
         if thisRestart is None:
             seakmcdata.get_defects(LogWriter, last_de_center=last_de_center)
             dataout.visualize_data_AVs(thissett.visual, seakmcdata, istep, out_paths[1])
