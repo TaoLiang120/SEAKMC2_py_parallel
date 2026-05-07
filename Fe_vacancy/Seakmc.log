@@ -4,10 +4,29 @@ The default cutting distance for neighbors is 1.1 times of the bond lengths!
 The default coordination number is 4.
 Seakmc start ...
 Successfully loading input and structure ...
-Relaxing the initial structure ...
 istep KMC: 0 itrial: 0
 pseudo_step KMC: 1000001
 There are 8 defects before the point defect reduction.
 The ground energy is -8020.23 eV at 1000001 KMC pseudo_step !
 There are 2 defects (active volumes) in data at 1000001 KMC pseudo_step!
 The fractional coords of the defect center are [0.95 0.95 0.95] at 1000001 KMC pseudo_step!
+
+Processing the 0 task - idav: 0 idsps: 0.
+ActVol ID: 0 nactive:167 nbuffer:282 nfixed:1502
+AV center fractional coords: (0.95694, 0.95694, 0.95694)
+idAV:0, idsps:0,  ntrans: 198,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 1, num of SPs:1, time: 15.315 s
+-----------------------------------------------------------------
+idAV:0, idsps:1,  ntrans: 165,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 2, num of SPs:2, time: 13.524 s
+-----------------------------------------------------------------
+idAV:0, idsps:2,  ntrans: 164,  barrier:0.646,  ebias: 0.553
+      dmag:0.863, dmagFin:1.213, isConnect: True
+      Valid SPs: 3, num of SPs:3, time: 12.156 s
+-----------------------------------------------------------------
+Found 3 saddle points in 0 active volume!
+-----------------------------------------------------------------
+Total time for 0 active volume: 41.158 s
+-----------------------------------------------------------------
