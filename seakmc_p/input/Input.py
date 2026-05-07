@@ -914,7 +914,6 @@ class Settings:
                 logstr += "\n" + f"This is corresponding to an energy barrier of {barr} eV at {temp} K with a prefactor of {prefactor}!."
                 print(logstr)
 
-
         if self.spsearch["insituGuidedSPS"]:
             self.active_volume["Overlapping"] = False
             self.active_volume["Stack4noOverlap"] = False
@@ -1032,7 +1031,6 @@ class Settings:
                 error_exit(errormsg)
         else:
             FixTypes_dict = None
-
         self.spsearch["FixTypes_dict"] = FixTypes_dict
 
     def reset_settings(self, key, value):
@@ -1060,5 +1058,4 @@ class Settings:
             self.saddle_point = value
         else:
             pass
-
 ############################################

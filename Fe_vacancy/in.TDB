@@ -7,7 +7,7 @@ atom_modify   map array
 boundary      p p p
 pair_style    eam/fs
 read_data     tmp0.dat
-pair_coeff    *  *  /Users/taoliang/PycharmProjects/SEAKMC_py/Fe_vacancy/Fe-P.eam.fs  Fe P
+pair_coeff    *  *  /Users/taoliang/PycharmProjects/SEAKMC2_py_parallel/Fe_vacancy/Fe-P.eam.fs  Fe P
 neighbor 2.0 bin
 neigh_modify every 1 delay 0 check yes
 timestep    0.002000
