@@ -40,9 +40,9 @@ force_evaluator:
         StrainRateType: 1
         Keyword4RinputTDB: "displacement equal"
 data:
-    atom_style: atomic
+    atom_style: molecular
     FileName: data.vac
-    Relaxed: False
+    Relaxed: True
 kinetic_MC:
     NSteps: 2
     Temp: 800.0
@@ -60,6 +60,6 @@ active_volume:
     DFixed: 10
 spsearch:
     NSearch: 3
-    SearchBuffer: True
+    SearchBuffer: False
     LocalRelax:
         LocalRelax: True
