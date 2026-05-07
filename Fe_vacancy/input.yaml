@@ -24,6 +24,7 @@ potential:
 force_evaluator:
     Bin: pylammps
     Screen: False
+    RinputOpt: in.relax
     TrialDisps2Basin:
         TrialDisps2Basin: True
         Rinput4TDB: in.TDB
