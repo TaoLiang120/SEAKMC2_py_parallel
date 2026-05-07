@@ -14,7 +14,7 @@ timestep    0.002000
 compute     pe  all pe
 compute     ke  all ke
 
-group      gfixed id <= 5
+group      gfixed id < 5 #avoid using 'id <=' for grouping atoms. This is the keyword for SP searching.
 
 
 displace_atoms gfixed move 0.0 ${displacement} 0.0 units box

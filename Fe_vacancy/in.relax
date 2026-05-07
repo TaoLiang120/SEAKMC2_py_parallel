@@ -14,7 +14,7 @@ compute     pe  all pe
 compute     ke  all ke
 
 
-group      gfixed id <= 5
+group      gfixed id < 5  #avoid using id <= for grouping atoms. This is the keyword for SP searching.
 
 fix 1 gfixed setforce 0.0 0.0 0.0
 minimize     0.0 1.0e-6 1000   10000
