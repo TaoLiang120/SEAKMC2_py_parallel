@@ -8,16 +8,23 @@ rank_world = comm_world.Get_rank()
 size_world = comm_world.Get_size()
 
 
-def data_dynamics(purpose, force_evaluator, data, ntask_tot, nactive=None, nproc_task=1, thisExports=None):
+def split_communicator(nproc_task, start_proc=0):
+    ntask_time = mympi.get_ntask_time(nproc_task, start_proc=start_proc, thiscomm=None)
+    if nproc_task == size_world:
+        comm_split = None
+        thiscolor = 0
+        isSplit = False
+    else:
+        comm_split, thiscolor = mympi.split_communicator(nproc_task, start_proc=start_proc, thiscomm=None)
+        isSplit = True
+    return isSplit, ntask_time, comm_split, thiscolor
+
+def data_dynamics(purpose, force_evaluator, data, ntask_tot, ntask_time, thiscolor, comm=comm_world, nactive=None, thisExports=None):
     if nactive is None:
         try:
             nactive = data.nactive
         except:
             nactive = data.natoms
-
-    start_proc = 0
-    ntask_time = mympi.get_ntask_time(nproc_task, start_proc=start_proc, thiscomm=None)
-    comm_split, thiscolor = mympi.split_communicator(nproc_task, start_proc=start_proc, thiscomm=None)
 
     ntask_left = ntask_tot
     ntask_time = min(ntask_time, ntask_left)
@@ -27,7 +34,7 @@ def data_dynamics(purpose, force_evaluator, data, ntask_tot, nactive=None, nproc
             [Eground, relaxed_coords, isValid, errormsg] = force_evaluator.run_runner(purpose, data, thiscolor,
                                                                                       nactive=nactive,
                                                                                       thisExports=thisExports,
-                                                                                      comm=comm_split)
+                                                                                      comm=comm)
         else:
             Eground = None
             relaxed_coords = None
@@ -40,8 +47,8 @@ def data_dynamics(purpose, force_evaluator, data, ntask_tot, nactive=None, nproc
         ntask_left = ntask_left - ntask_time
         ntask_time = min(ntask_time, ntask_left)
 
-    comm_split.Free()
     comm_world.Barrier()
+
     Eground = comm_world.bcast(Eground, root=0)
     relaxed_coords = comm_world.bcast(relaxed_coords, root=0)
     isValid = comm_world.bcast(isValid, root=0)

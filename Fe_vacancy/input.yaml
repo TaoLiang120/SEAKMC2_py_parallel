@@ -1,4 +1,5 @@
 system:
+    Inteval4ShowProgress: 10
     Restart:
         LoadRestart: False
         LoadFile: False
@@ -22,9 +23,10 @@ potential:
     pair_coeff: False
 force_evaluator:
     Bin: pylammps
+    Screen: False
     TrialDisps2Basin:
-        TrialDisps2Basin: False
-        Rinput4TDB: rTDB.in
+        TrialDisps2Basin: True
+        Rinput4TDB: in.TDB
         Ref_Length: 28.5
         Target_StrainRate: 10
         Disps:
@@ -33,8 +35,8 @@ force_evaluator:
             - 0.004
             - 0.008
         MinDisp: 0.0001
-        MaxDisp: 0.01
-        StrainRateType: tension
+        MaxDisp: 0.1
+        StrainRateType: 1
         Keyword4RinputTDB: "displacement equal"
 data:
     atom_style: atomic
@@ -56,7 +58,7 @@ active_volume:
     DBuffer: 3.0
     DFixed: 10
 spsearch:
-    NSearch: 10
+    NSearch: 3
     SearchBuffer: True
     LocalRelax:
         LocalRelax: True
