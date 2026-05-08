@@ -45,12 +45,15 @@ class TrialDisp2Basin:
                                                                                thisExports=self.export,
                                                                                **COMM_args)
 
-        self.Eground = Eground
         if rank_world == 0:
             if not isValid:
                 LogWriter.write_data(errormsg)
                 error_exit(errormsg)
         comm_world.Barrier()
+
+        Eground = comm_world.bcast(Eground, root=0)
+        self.Eground = Eground
+
 
     def update_thisdata(self, thissett):
         self.thisdata = SeakmcData.from_file("Runner_0/tmp1.dat", atom_style=thissett.data['atom_style_after'])
@@ -186,12 +189,16 @@ class TrialDisps:
 
     @staticmethod
     def fit(x, y):
-        try:
-            popt, pcov = curve_fit(func1, x, y)
+        if len(x) == 2:
+            popt = np.linalg.solve(np.array([[x[0], 1.0], [x[1], 1.0]]), y)
             isValid = True
-        except:
-            popt = np.array([0.0, 0.0])
-            isValid = False
+        else:
+            try:
+                popt, pcov = curve_fit(func1, x, y)
+                isValid = True
+            except:
+                popt = np.array([0.0, 0.0])
+                isValid = False
         return isValid, popt
 
     @staticmethod
@@ -214,10 +221,12 @@ class TrialDisps:
         self.strainrates = np.divide(self.strains, self.one_over_freqs) * 1.0e12
         self.logstrainrates = np.log(np.absolute(self.strainrates))
         isValid, popt = TrialDisps.fit(self.strains, self.logstrainrates)
-        if isValid and self.ndisps > 2:
-            x, y = self.chop_x_y(self.strains, self.logstrainrates, popt)
-            if len(x) >= 2:
-                isValid, popt = TrialDisps.fit(x, y)
+
+        if isValid:
+            if self.ndisps > 2:
+                x, y = self.chop_x_y(self.strains, self.logstrainrates, popt)
+                if len(x) >= 2:
+                    isValid, popt = TrialDisps.fit(x, y)
             self.target_strain = (np.log(self.target_strainrate) - popt[1]) / popt[0]
         else:
             self.target_strain = 0.0

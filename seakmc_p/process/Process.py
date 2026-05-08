@@ -135,10 +135,14 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
                 seakmcdata = copy.deepcopy(thisTDB.thisdata)
                 Eground = thisTDB.Eground
                 thisTDB = None
+                if rank_world == 0:
+                    if thissett.visual["Write_Data_SPs"]["Write_KMC_Data"]:  seakmcdata.to_lammps_data(
+                        out_paths[1] + "/" + "KMC_" + str(istep) + ".dat", to_atom_style=True)
                 comm_world.Barrier()
             ### End of Trial Displacements 2 Basin ###
-            logstr = f"istep KMC: {istep}"
-            LogWriter.write_data(logstr)
+            if rank_world == 0:
+                logstr = f"istep KMC: {istep}"
+                LogWriter.write_data(logstr)
 
             seakmcdata.get_defects(LogWriter, last_de_center=last_de_center)
             dataout.visualize_data_AVs(thissett.visual, seakmcdata, istep, out_paths[1])
@@ -309,10 +313,10 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
 
         comm_world.Barrier()
 
-        '''
+
         MPI.Finalize()
         comm_world = MPI.COMM_WORLD
         rank_world = comm_world.Get_rank()
         size_world = comm_world.Get_size()
-        '''
+
     return simulation_time
