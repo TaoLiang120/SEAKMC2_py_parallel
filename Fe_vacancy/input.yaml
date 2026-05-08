@@ -29,7 +29,7 @@ force_evaluator:
         TrialDisps2Basin: True
         Rinput4TDB: in.TDB
         Ref_Length: 28.5
-        Target_StrainRate: 1
+        Target_StrainRate: 0.1
         Disps:
             - 0.001
             - 0.02
