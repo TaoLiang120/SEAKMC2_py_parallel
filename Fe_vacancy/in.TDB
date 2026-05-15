@@ -1,0 +1,24 @@
+variable displacement equal 0.01
+
+units         metal
+dimension     3
+atom_style    molecular
+atom_modify   map array
+boundary      p p p
+pair_style    eam/fs
+read_data     tmp0.dat
+pair_coeff    *  *  Fe-P.eam.fs  Fe P
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+timestep    0.002000
+compute     pe  all pe
+compute     ke  all ke
+
+group      gfixed id < 5
+
+displace_atoms gfixed move 0.0 ${displacement} 0.0 units box
+fix 1 gfixed setforce 0.0 0.0 0.0
+minimize     0.0 1.0e-6 1000   10000
+unfix 1
+run 0
+write_data  Runner_0/tmp1.dat
