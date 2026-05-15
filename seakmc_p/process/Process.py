@@ -78,7 +78,7 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
                 for itrial in range(TDBsett["nDisps"]):
                     displacement = thisTrialDisps.displacements[itrial]
                     thisTDB = TrialDisp2Basin(seakmcdata, displacement, itrial, Eground=Eground,
-                                              istep=istep, **thisExports)
+                                              **thisExports)
 
                     COMM_args = mympi.get_COMM_info(nproc_task, start_proc=0)
                     force_evaluator.init_binary(comm=COMM_args["thiscomm"],
@@ -118,7 +118,7 @@ def run_seakmc(thissett, seakmcdata, object_dict, Eground, thisRestart):
                 comm_world.Barrier()
                 target_displacement = comm_world.bcast(target_displacement, root=0)
                 thisTDB = TrialDisp2Basin(seakmcdata, target_displacement, TDBsett["nDisps"], Eground=Eground,
-                                          istep=istep, **thisExports)
+                                          **thisExports)
 
                 COMM_args = mympi.get_COMM_info(nproc_task, start_proc=0)
                 force_evaluator.init_binary(comm=COMM_args["thiscomm"],
