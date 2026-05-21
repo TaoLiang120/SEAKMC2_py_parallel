@@ -4,11 +4,8 @@ The default cutting distance for neighbors is 1.1 times of the bond lengths!
 The default coordination number is 4.
 Seakmc start ...
 Successfully loading input and structure ...
-istep KMC: 0 itrial: 0
-pseudo_step KMC: 1000001
-There are 8 defects before the point defect reduction.
-The ground energy is -8020.23 eV at 1000001 KMC pseudo_step !
-There are 2 defects (active volumes) in data at 1000001 KMC pseudo_step!
-The fractional coords of the defect center are [0.95 0.95 0.95] at 1000001 KMC pseudo_step!
-
-Processing the 0 task - idav: 0 idsps: 0.
+istep KMC: 0
+There are 2 defects before the point defect reduction.
+The ground energy is -7993.279 eV at 0 KMC step!
+There are 2 defects (active volumes) in data at 0 KMC step!
+The fractional coords of the defect center are [0.475 0.475 0.5  ] at 0 KMC step!

@@ -869,7 +869,6 @@ class SeakmcData(LammpsData, MSONable):
                 defect_list.append(atoms_ghost_array[j])
                 dCN_list.append(0)
                 selected_inds.append(j)
-
         return defect_list, dCN_list
 
     def custom_find_defects(self):
