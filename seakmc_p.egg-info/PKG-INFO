@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: seakmc-p
+Version: 2.0.0
+Summary: Self Evolution Adaptive Kinetic Monte Carlo
+Home-page: https://github.com/TaoLiang120/SEAKMC2_py
+Author: Tao Liang
+Author-email: xhtliang120@gmail.com
+License-File: LICENSE

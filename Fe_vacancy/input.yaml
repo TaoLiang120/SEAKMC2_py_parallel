@@ -26,7 +26,7 @@ force_evaluator:
     Screen: False
     RinputOpt: in.relax
     TrialDisps2Basin:
-        TrialDisps2Basin: False
+        TrialDisps2Basin: True
         Rinput4TDB: in.TDB
         Ref_Length: 28.5
         Target_StrainRate: 0.1
@@ -40,8 +40,8 @@ force_evaluator:
             - displacement equal, displacement
 data:
     atom_style: atomic
-    FileName: Fe2001.dat
-    Relaxed: True
+    FileName: SIA_Tet.dat
+    Relaxed: False
 kinetic_MC:
     NSteps: 2
     Temp: 300.0
@@ -51,16 +51,23 @@ saddle_point:
         CheckConnectivity: True
 active_volume:
     Style: defects
-    DCut4PDR: 4.0
+    DCut4PDR: 6.0
     FindDefects:
-        Method: WS
+        Method: CN
         ReferenceData: Fe2000.dat
         atom_style4Ref: atomic
-    DActive: 7.7
-    DBuffer: 3.0
-    DFixed: 10
+    DActive: 8.0
+    DBuffer: 1.0
+    DFixed: 6
+    Overlapping: False
 spsearch:
     NSearch: 3
     SearchBuffer: False
+    insituGuidedSPS: True
+    TrialStepsize4insituGSPS: 0.015
+    MaxStepsize4insituGSPS: 0.05
+    Ratio4DispLoad4insituGSPS: 1.0
+    TransHorizon4insituGSPS: True
+    NMax4Trans4insituGSPS: 1000
     LocalRelax:
         LocalRelax: True

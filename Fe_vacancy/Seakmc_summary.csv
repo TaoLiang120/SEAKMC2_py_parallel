@@ -1,1 +1,3 @@
 istep,ground_energy,nDefect,defect_center_xs,defect_center_ys,defect_center_zs,nBasin,nSP_thisbasin,nSP_superbasin,iSP_selected,forward_barrier,ebias,backward_barrier,one_over_freq,mean_squared_disp,diffusion_coeff,time_step,simulation_time
+0,-64202.467644,2,0.248324,0.251903,0.25,1,9,8,1,0.32,0.031,0.289,3959.236039,2.996249,0.000126,2996.300422,2996.300422
+1,-64202.467642,2,0.237501,0.265091,0.260371,1,12,11,6,0.32,0.031,0.289,2965.713592,2.992502,0.000168,7.387146,3003.687567

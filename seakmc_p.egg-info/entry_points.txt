@@ -1,0 +1,2 @@
+[console_scripts]
+seakmc_p = seakmc_p.script.seakmc_p:main
